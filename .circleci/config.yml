@@ -1,15 +1,15 @@
-version:
-2jobs:
-build:
-docker:
-  - image: circleci/node:8
-steps:
-  - checkout
-  - restore_cache:
-      key: dependency-cache-{{ checksum "package.json" }}
-  - run:
-    name: Setup Dependencies
-    command: npm ci
-  - run:
-    name: Run Test
-    command: npm test
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:8
+    steps:
+      - checkout
+      - restore_cache:
+        key: dependency-cache-{{ checksum "package.json" }}
+      - run:
+        name: Setup Dependencies
+        command: npm ci
+      - run:
+        name: Run Test
+        command: npm test
