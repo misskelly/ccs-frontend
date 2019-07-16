@@ -1,6 +1,7 @@
 version: 2
 jobs:
   build:
+    working_directory: ~/home
     docker:
       - image: circleci/node:8
     steps:
@@ -10,6 +11,10 @@ jobs:
       - run:
         name: Setup Dependencies
         command: npm ci
+      - save_cache:
+          key: npm-cache-v1-{{ checksum "package-lock.json" }}
+          paths:
+            - /home/circleci/.npm
       - run:
         name: Run Test
         command: npm test
