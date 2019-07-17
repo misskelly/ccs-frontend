@@ -10,7 +10,7 @@ const App = () => {
       <Header />
       <HomePage />
       <MapPage />
-      {/* <MoreInfoPage /> */}
+    {/* <MoreInfoPage /> */}
     </>
   )
 }
