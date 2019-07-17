@@ -1,11 +1,11 @@
 import React from 'react'
-import Atlas from '../Atlas'
+import MapPage from '../MapPage'
 
 const App = () => {
   return (
     <main>
       <h1>InCrisis</h1>
-      <Atlas />
+      <MapPage />
       {/* <Header /> */}
       {/* <HomePage /> */}
       {/* <MapPage /> */}

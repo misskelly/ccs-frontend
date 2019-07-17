@@ -6,7 +6,7 @@ import { Map, Marker, Popup, TileLayer } from 'react-leaflet'
 function Atlas () {
   const lat = 39.780760;
   const long = -105.082270;
-  const originalCenter = [lat, long]
+  const originalCenter = [lat, long];
 
   const [userLocation, setUserLocation] = useState(originalCenter);
   
@@ -27,7 +27,7 @@ function Atlas () {
         <Popup>Info about center</Popup>
       </Marker>
     </Map>
-  )
-}
+  );
+};
 
 export default Atlas;
