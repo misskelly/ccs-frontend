@@ -8,7 +8,7 @@ const App = () => {
       <Atlas />
       {/* <Header /> */}
       {/* <HomePage /> */}
-      {/* <MapPage /> */}
+      {/* <Atlas /> */}
       {/* <MoreInfoPage /> */}
     </main>
   )
