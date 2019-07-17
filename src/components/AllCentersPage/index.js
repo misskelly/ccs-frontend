@@ -2,9 +2,9 @@ import React from 'react'
 
 export const AllCentersPage = () => {
   return (
-    <div>
-      
-    </div>
+    <main className="all-centers">
+      ALL CENTERS
+    </main>
   )
 }
 

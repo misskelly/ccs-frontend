@@ -2,9 +2,9 @@ import React from 'react';
 
 export const HomePage = () => {
   return (
-    <section className="home-page">
+    <main className="home-page">
       
-    </section>
+    </main>
   )
 }
 

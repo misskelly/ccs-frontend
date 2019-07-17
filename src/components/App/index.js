@@ -5,13 +5,13 @@ import MapPage from '../MapPage';
 
 const App = () => {
   return (
-    <main>
+    <>
       <h1>InCrisis</h1>
       <Header />
       <HomePage />
       <MapPage />
       {/* <MoreInfoPage /> */}
-    </main>
+    </>
   )
 }
 
