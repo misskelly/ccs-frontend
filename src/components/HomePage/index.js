@@ -1,11 +1,11 @@
-import React from 'react'
+import React from 'react';
 
 export const HomePage = () => {
   return (
-    <section>
+    <section className="home-page">
       
     </section>
   )
 }
 
-export default HomePage
+export default HomePage;
