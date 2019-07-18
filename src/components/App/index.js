@@ -10,6 +10,7 @@ const App = () => {
   return (
     <>
       <Header />
+      <MapPage> </MapPage>
       <Switch>
         <Route exact path='/' component={ HomePage } />
         <Route path='/walk-in' component={ MapPage } />
