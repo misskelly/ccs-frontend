@@ -1,3 +1,4 @@
+
 import React, { useState} from 'react';
 import Atlas from '../Atlas';
 
@@ -20,7 +21,7 @@ const MapPage = () => {
   };
 
   const fetchLocations = () => {
-
+    console.log('Fetchy fetch fetch')
   };
 
   return (
@@ -45,3 +46,4 @@ const MapPage = () => {
 };
 
 export default MapPage;
+

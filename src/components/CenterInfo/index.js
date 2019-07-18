@@ -4,7 +4,7 @@ const CenterInfo = () => {
   return (
     <article
       className="center-card">
-      
+      CENTER INFO
     </article>
   )
 }

@@ -6,6 +6,7 @@
 @import '../../components/HomePage/HomePage';
 @import '../../components/MapPage/MapPage';
 @import '../../components/Modal/Modal';
+@import '../../components/Menu/Menu';
 @import '../../components/Atlas/Atlas';
 // @import '../../components/MoreInfoPage/MoreInfoPage';
 
@@ -16,8 +17,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background: hsl(202, 49%, 19%);
 }
 
 code {
