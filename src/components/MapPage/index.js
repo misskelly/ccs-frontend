@@ -20,9 +20,9 @@ const MapPage = () => {
     );
   };
 
-  // const fetchLocations = () => {
-
-  // };
+  const fetchLocations = () => {
+    console.log('Fetchy fetch fetch')
+  };
 
   return (
     <section>
