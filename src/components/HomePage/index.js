@@ -7,14 +7,15 @@ export const HomePage = () => {
     <main className="home-page">
       <h2 className="home-heading">
         When you're feeling
-        <span className="under-water-span">
+        <div className="under-water-span">
           Under Water
-        </span>
+        </div>
       </h2>
       <section className="btn-wrapper">
-      <Button kind="call" />
-      <Button kind="text" />
-      <Button kind="walk-in" />
+        <Button kind="call" />
+        <Button kind="text" />
+        <Button kind="walk-in" />
+      </section>
       <p className="service-desc-p">
         { serviceText1 }
         <a className="phone-num-link" 
@@ -32,7 +33,6 @@ export const HomePage = () => {
           ColoradoCrisisServices.org.
         </a>
       </p>
-      </section>
     </main>
   )
 }

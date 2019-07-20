@@ -1,6 +1,5 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import CCSlogo from  '../../assets/images/CCS_Horizontal_white.png';
 import Menu from '../Menu'
 
 const Header = () => {
@@ -10,7 +9,7 @@ const Header = () => {
         className="ccs-logo-wrapper"
         to="/">
         <img 
-          src={CCSlogo}
+          src = {require('../../assets/images/CCS_Horizontal_white.png')}
           className="ccs-logo-img"
           alt="Colorado Crisis Services logo with swirly tree, link to home page"
         />
