@@ -1,9 +1,9 @@
 
 import React, { useState} from 'react';
 import Atlas from '../Atlas';
+import Modal from '../Modal';
 
 const MapPage = () => {
-  const [canEnterAddress, setCanEnterAddress] = useState(false);
   const [userAddress, setUserAddress] = useState('');
   const [userLocation, setUserLocation] = useState([]);
   const [closestLocation, setClosestLocation] = useState({
@@ -41,22 +41,25 @@ const MapPage = () => {
   const bikingUrl = `https://www.google.com/maps/dir/?api=1&origin=${userLocation[0]},${userLocation[1]}&destination=${closestLocation.lat},${closestLocation.lng}&travelmode=bicycling`;
 
 
+    // <section>
+    //   <Modal getUserLocation={getUserLocation}/>
+    //   <button onClick={getUserLocation}>Use Current Location</button>
+    //   <p> If more comfortable {`${' '}`}
+    //     <span onClick={() => {setCanEnterAddress(!canEnterAddress)}}>
+    //        enter an adress.
+    //     </span>
+    //   </p>
+    //   {
+    //     canEnterAddress
+    //     &&
+    //     <form>
+    //       <input name="address"/>
+    //       <button>submit </button>
+    //     </form>
+    //   }
   return (
     <section>
-      <button onClick={getUserLocation}>Use Current Location</button>
-      <p> If more comfortable {`${' '}`}
-        <span onClick={() => {setCanEnterAddress(!canEnterAddress)}}>
-           enter an adress.
-        </span>
-      </p>
-      {
-        canEnterAddress
-        &&
-        <form>
-          <input name="address"/>
-          <button>submit </button>
-        </form>
-      }
+      <Modal getUserLocation={getUserLocation}/>
       {userLocation.length > 0 && <Atlas userLocation={userLocation} />}
       <p>Center is {closestLocation.distance} miles away</p>
       <section> 
