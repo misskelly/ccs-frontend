@@ -2,6 +2,7 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Header from '../Header';
 import HomePage from '../HomePage';
+import MapPage from '../MapPage';
 import AllCentersPage from '../AllCentersPage';
 // import MoreInfoPage from '../MoreInfoPage';
 
