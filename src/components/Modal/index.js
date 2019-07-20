@@ -1,13 +1,31 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-const Modal = () => {
+const Modal = (props) => {
+  const [address, setAddress] = useState('');
+  const [canEnterAddress, setCanEnterAddress] = useState(false);
+  const fetchUsingAddress = () => {
+
+  }
   return (
-    <article className="modal">
-      <h2 className="modal-text">Do you want to do the thing?</h2>
-      <button>No</button>
-      <button>Yes</button>
-    </article>
-  )
-}
+    <section className="modal">
+      {
+        !canEnterAddress
+        &&
+        <article>
+          <button onClick={props.getUserLocation}>USE CURRENT LOCATION</button>
+          <button onClick={ () => setCanEnterAddress(!canEnterAddress) }>Enter Address</button>
+        </article>
+      }
+      {
+        canEnterAddress
+        &&
+        <form onSubmit={fetchUsingAddress}>
+          <input placeholder="Enter an Address" onChange={(e) => setAddress(e.target.value)}/>
+          <button>Submit</button>
+        </form>
+      }
+    </section>
+  );
+};
 
 export default Modal;
