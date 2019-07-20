@@ -25,3 +25,4 @@ export const menuItemText = [
     class: 'all-centers-menu-link'
   }
 ]
+
