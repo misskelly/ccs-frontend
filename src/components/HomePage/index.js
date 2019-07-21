@@ -7,18 +7,30 @@ export const HomePage = () => {
     <main className="home-page">
       <h2 className="home-heading">
         When you're feeling
-        <div className="under-water-span">
+        <strong className="under-water-span">
           Under Water
-        </div>
+        </strong>
       </h2>
       <section className="btn-wrapper">
+        <a className="home-call-btn large-btn btn"
+          href="tel: +1-844-493-8255">
+          Call
+        </a> 
+        <a 
+        className="home-call-btn large-btn btn"
+        href="sms:38255&body=TALK%0A">
+          Text
+        </a>
+
+
         <Button kind="call" />
         <Button kind="text" />
         <Button kind="walk-in" />
       </section>
       <p className="service-desc-p">
         { serviceText1 }
-        <a className="phone-num-link" 
+        <a 
+          className="phone-num-link" 
           href="tel: +1-844-493-8255"> 
           +1-844-493-TALK 
         </a>
