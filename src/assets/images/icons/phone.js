@@ -10,7 +10,7 @@ const PhoneIcon = () => {
     version="1.1"
     viewBox="0 0 438.536 438.536"
     xmlSpace="preserve"
-    class="phone-icon svg-icon"
+    className="phone-icon svg-icon"
     role="img"
     aria-hidden="true"
     focusable="false"
