@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import Button from '../Button';
-import { serviceText1, serviceText2 } from '../../utils/text.js'
+import { serviceText1, serviceText2 } from '../../utils/text.js';
 
 export const HomePage = () => {
   return (
@@ -33,7 +33,7 @@ export const HomePage = () => {
         </a>
         { serviceText2 }
         <a className="ccs-website-link" 
-          href="https://coloradocrisisservices.org/">
+          href="https://coloradocrisisservices.org/press/">
           ColoradoCrisisServices.org.
         </a>
       </p>
@@ -52,7 +52,7 @@ export const HomePage = () => {
         </NavLink>
         <NavLink
           className="ccs-link-footer"
-          to="https://coloradocrisisservices.org/">
+          to="">
           <img 
             src = {require('../../assets/images/CCS_Vertical_Color.png')}
             className="ccs-logo-img"

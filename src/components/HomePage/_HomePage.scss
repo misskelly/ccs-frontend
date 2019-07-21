@@ -8,3 +8,14 @@
   width: 90%;
   margin: 0 auto;
 }
+
+.home-heading {
+  @include font-size(2rem);
+  text-transform: uppercase;
+  color: $white;
+  text-align: center;
+}
+
+.under-water-span {
+  display: block;
+}

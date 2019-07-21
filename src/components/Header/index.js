@@ -12,7 +12,7 @@ const Header = () => {
         <img 
           src = {require('../../assets/images/in-crisis-logo.svg')}
           className="ccs-logo-img"
-          alt="Colorado Crisis Services logo with swirly tree, link to home page"
+          alt="InCrisis logo"
           aria-hidden="true"
         />
       </NavLink>
