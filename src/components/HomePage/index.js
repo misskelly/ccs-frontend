@@ -33,7 +33,7 @@ export const HomePage = () => {
         </a>
         { serviceText2 }
         <a className="ccs-website-link" 
-          href="https://coloradocrisisservices.org/press/">
+          href="https://coloradocrisisservices.org/">
           ColoradoCrisisServices.org.
         </a>
       </p>
@@ -52,7 +52,7 @@ export const HomePage = () => {
         </NavLink>
         <NavLink
           className="ccs-link-footer"
-          to="/">
+          to="https://coloradocrisisservices.org/">
           <img 
             src = {require('../../assets/images/CCS_Vertical_Color.png')}
             className="ccs-logo-img"

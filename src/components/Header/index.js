@@ -8,10 +8,12 @@ const Header = () => {
       <NavLink
         className="ccs-logo-wrapper"
         to="/">
+        <h1 className="hidden-heading">In Crisis</h1>
         <img 
-          src = {require('../../assets/images/CCS_Horizontal_white.png')}
+          src = {require('../../assets/images/in-crisis-logo.svg')}
           className="ccs-logo-img"
           alt="Colorado Crisis Services logo with swirly tree, link to home page"
+          aria-hidden="true"
         />
       </NavLink>
       <Menu />
