@@ -1,12 +1,14 @@
 import React, { useState } from 'react'
 
 const Modal = (props) => {
-  const [address, setAddress] = useState('');
+  const [streetAddress, setStreetAddress] = useState('');
+  const [zipCode, setZipCode] = useState('');
+  const [city, setCity] = useState('');
+
   const [canEnterAddress, setCanEnterAddress] = useState(false);
   const {
     userLocation: [userLocation, setUserLocation]
   } = {
-    userLocation: useState([]),
     ...(props.userLocation || {})
   };
 
@@ -35,7 +37,9 @@ const Modal = (props) => {
         canEnterAddress
         &&
         <form onSubmit={fetchUsingAddress}>
-          <input placeholder="Enter an Address" onChange={(e) => setAddress(e.target.value)}/>
+          <input type="text" placeholder="Street Address" onChange={(e) => setStreetAddress(e.target.value)}/>
+          <input type="number" placeholder="ZIP" onChange={(e) => setZipCode(e.target.value)}/>
+          <input type="text" placeholder="City" onChange={(e) => setCity(e.target.value)}/>
           <button>Submit</button>
         </form>
       }
