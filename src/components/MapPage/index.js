@@ -1,5 +1,4 @@
-
-import React, { useState} from 'react';
+import React, { useState } from 'react';
 import Atlas from '../Atlas';
 import Modal from '../Modal';
 
@@ -17,7 +16,7 @@ const MapPage = () => {
       "hours": "24 hours a day, 7 days a week",
       "lat": 39.7403,
       "lng": -104.9363
-    });
+  });
 
   const getAndFetchUserLocation = () => {
     if (window.navigator.geolocation) {
@@ -25,11 +24,7 @@ const MapPage = () => {
     fetchLocations();
   };
 
-  const getUserLocation = () => {
-    window.navigator.geolocation.getCurrentPosition((position) => 
-      setUserLocation([position.coords.latitude, position.coords.longitude])
-    );
-  };
+
 
   const fetchLocations = () => {
     console.log('Fetchy fetch fetch')
@@ -41,25 +36,10 @@ const MapPage = () => {
   const bikingUrl = `https://www.google.com/maps/dir/?api=1&origin=${userLocation[0]},${userLocation[1]}&destination=${closestLocation.lat},${closestLocation.lng}&travelmode=bicycling`;
 
 
-    // <section>
-    //   <Modal getUserLocation={getUserLocation}/>
-    //   <button onClick={getUserLocation}>Use Current Location</button>
-    //   <p> If more comfortable {`${' '}`}
-    //     <span onClick={() => {setCanEnterAddress(!canEnterAddress)}}>
-    //        enter an adress.
-    //     </span>
-    //   </p>
-    //   {
-    //     canEnterAddress
-    //     &&
-    //     <form>
-    //       <input name="address"/>
-    //       <button>submit </button>
-    //     </form>
-    //   }
+
   return (
     <section>
-      <Modal getUserLocation={getUserLocation}/>
+      <Modal userLocation={{ userLocation: [userLocation, setUserLocation] }} />
       {userLocation.length > 0 && <Atlas userLocation={userLocation} />}
       <p>Center is {closestLocation.distance} miles away</p>
       <section> 
