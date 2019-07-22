@@ -1,6 +1,7 @@
 
 import React, { useState} from 'react';
 import Atlas from '../Atlas';
+import { fetchLocationsCall } from '../../utils/apiCalls/fetchLocationsCall';
 
 const MapPage = () => {
   const [canEnterAddress, setCanEnterAddress] = useState(false);
@@ -25,14 +26,16 @@ const MapPage = () => {
     fetchLocations();
   };
 
-  const getUserLocation = () => {
-    window.navigator.geolocation.getCurrentPosition((position) => 
-      setUserLocation([position.coords.latitude, position.coords.longitude])
+  const getUserLocation = async () => {
+    await window.navigator.geolocation.getCurrentPosition(async (position) => 
+      await setUserLocation([position.coords.latitude, position.coords.longitude])
     );
+    fetchLocations(userLocation)
   };
 
   const fetchLocations = () => {
-    console.log('Fetchy fetch fetch')
+    const url = 'https://cohelp-backend.herokuapp.com/api/v1/locations/sort?lat=39.7504&lng=-104.9963'
+    fetchLocationsCall(url)
   };
 
   const drivingUrl = `https://www.google.com/maps/dir/?api=1&origin=${userLocation[0]},${userLocation[1]}&destination=${closestLocation.lat},${closestLocation.lng}&travelmode=driving`;
