@@ -42,8 +42,9 @@ const MapPage = () => {
 
 
   return (
-    <section>
-      <button onClick={getUserLocation}>Use Current Location</button>
+    <main className="map-page">
+      <button 
+        className="use-location-btn" onClick={getUserLocation}>Use Current Location</button>
       <p> If more comfortable {`${' '}`}
         <span onClick={() => {setCanEnterAddress(!canEnterAddress)}}>
            enter an adress.
@@ -62,19 +63,19 @@ const MapPage = () => {
       <section> 
         <h3>GET DIRECTIONS</h3>
         <a href={drivingUrl} target="_blank" rel="noopener noreferrer">
-          <img src={require("../../assets/images/icons/car.svg")} alt="car directions link"/>
+          <img className="svg-icon car-icon" src={require("../../assets/images/icons/car.svg")} alt="car directions link"/>
         </a>
         <a href={walkingUrl} target="_blank" rel="noopener noreferrer">
-          <img src={require("../../assets/images/icons/walk.svg")} alt="walking directions link"/>
+          <img className="svg-icon walk-icon" src={require("../../assets/images/icons/walk.svg")} alt="walking directions link"/>
         </a>
         <a href={bikingUrl} target="_blank" rel="noopener noreferrer">
-          <img src={require("../../assets/images/icons/bike.svg")} alt="biking directions link"/>
+          <img className="svg-icon bike-icon" src={require("../../assets/images/icons/bike.svg")} alt="biking directions link"/>
         </a>
         <a href={transitUrl} target="_blank" rel="noopener noreferrer">
-          <img src={require("../../assets/images/icons/bus.svg")} alt="public transit directions link"/>
+          <img className="svg-icon bus-icon"src={require("../../assets/images/icons/bus.svg")} alt="public transit directions link"/>
         </a>
       </section>
-    </section>
+    </main>
   );
 };
 

@@ -1,11 +1,5 @@
 .home-page {
-  position: relative;
-  width: 100%;
-  margin: 5rem 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  @include page-component;
 }
 
 .water-img {
@@ -54,7 +48,7 @@
 }
 
 .btn-links-wrapper {
-  width: 80%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   margin: 0 0 5rem 0;
@@ -67,7 +61,9 @@
 
 
 .large {
-  width: 85%;
+  width: 50%;
+  max-width: 400px;
+  min-width: 240px;
   margin: .5rem;
   font-size: 2.5rem;
   font-weight: bold;
@@ -76,7 +72,7 @@
   justify-content: space-between;
   border-radius: 50px;
   align-self: center;
-  padding: .5rem 3rem;
+  padding: .5rem 2rem;
   background: $muted-blue;
   // background-image: linear-gradient(-225deg, $muted-blue 25%, $blue 75%);
 
