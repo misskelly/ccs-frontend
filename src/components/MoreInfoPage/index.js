@@ -20,7 +20,7 @@ const MoreInfoPage = () => {
           <img 
             role="button" 
             src={require("../../assets/images/icons/cancel-x.svg")}
-            onClick={() => setAnswer('')}
+            onClick={ () => setAnswer('') }
           />
         </aside>
       }
