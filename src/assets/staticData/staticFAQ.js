@@ -1,4 +1,4 @@
-[
+export const faqs = [
   { 
     question: "WHAT IS COLORADO CRISIS SERVICES?",
     answer: "We are Colorado’s first statewide resource for mental health, substance use or emotional crisis help, information and referrals. We formed as a part of the initiative set forth by Gov. John Hickenlooper, in partnership with the Colorado Department of Human Services, to strengthen Colorado’s mental health system. Our purpose is to provide greater access to mental health services, ensuring Coloradans get the right services in the right locations at the right time."

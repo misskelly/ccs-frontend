@@ -1,10 +1,9 @@
-
-import React, { useState} from 'react';
+import React, { useState } from 'react';
 import Atlas from '../Atlas';
+import Modal from '../Modal';
 import { fetchLocationsCall } from '../../utils/apiCalls/fetchLocationsCall';
 
 const MapPage = () => {
-  const [canEnterAddress, setCanEnterAddress] = useState(false);
   const [userAddress, setUserAddress] = useState('');
   const [userLocation, setUserLocation] = useState([]);
   const [closestLocation, setClosestLocation] = useState({
@@ -18,6 +17,7 @@ const MapPage = () => {
       "hours": "24 hours a day, 7 days a week",
       "lat": 39.7403,
       "lng": -104.9363
+
     });
 
   const getAndFetchUserLocation = () => {
@@ -44,40 +44,37 @@ const MapPage = () => {
   const bikingUrl = `https://www.google.com/maps/dir/?api=1&origin=${userLocation[0]},${userLocation[1]}&destination=${closestLocation.lat},${closestLocation.lng}&travelmode=bicycling`;
 
 
+
   return (
     <main className="map-page">
-      <button 
-        className="use-location-btn" onClick={getUserLocation}>Use Current Location</button>
-      <p> If more comfortable {`${' '}`}
-        <span onClick={() => {setCanEnterAddress(!canEnterAddress)}}>
-           enter an adress.
-        </span>
-      </p>
       {
-        canEnterAddress
+        userLocation.length === 0
         &&
-        <form>
-          <input name="address"/>
-          <button>submit </button>
-        </form>
+        <Modal userLocation={{ userLocation: [userLocation, setUserLocation] }} />
       }
-      {userLocation.length > 0 && <Atlas userLocation={userLocation} />}
-      <p>Center is {closestLocation.distance} miles away</p>
-      <section> 
-        <h3>GET DIRECTIONS</h3>
-        <a href={drivingUrl} target="_blank" rel="noopener noreferrer">
-          <img className="svg-icon car-icon" src={require("../../assets/images/icons/car.svg")} alt="car directions link"/>
-        </a>
-        <a href={walkingUrl} target="_blank" rel="noopener noreferrer">
-          <img className="svg-icon walk-icon" src={require("../../assets/images/icons/walk.svg")} alt="walking directions link"/>
-        </a>
-        <a href={bikingUrl} target="_blank" rel="noopener noreferrer">
-          <img className="svg-icon bike-icon" src={require("../../assets/images/icons/bike.svg")} alt="biking directions link"/>
-        </a>
-        <a href={transitUrl} target="_blank" rel="noopener noreferrer">
-          <img className="svg-icon bus-icon"src={require("../../assets/images/icons/bus.svg")} alt="public transit directions link"/>
-        </a>
-      </section>
+      {
+        userLocation.length > 0
+        &&
+        <article>
+          <map>
+            <Atlas userLocation={userLocation} />
+          </map>
+          <p>Center is {closestLocation.distance} miles away</p>
+          <h3>GET DIRECTIONS</h3>
+          <a href={drivingUrl} target="_blank" rel="noopener noreferrer">
+            <img className="svg-icon car-icon" src={require("../../assets/images/icons/car.svg")} alt="car directions link"/>
+          </a>
+          <a href={walkingUrl} target="_blank" rel="noopener noreferrer">
+            <img className="svg-icon walk-icon" src={require("../../assets/images/icons/walk.svg")} alt="walking directions link"/>
+          </a>
+          <a href={bikingUrl} target="_blank" rel="noopener noreferrer">
+            <img className="svg-icon bike-icon" src={require("../../assets/images/icons/bike.svg")} alt="biking directions link"/>
+          </a>
+          <a href={transitUrl} target="_blank" rel="noopener noreferrer">
+            <img className="svg-icon bus-icon"src={require("../../assets/images/icons/bus.svg")} alt="public transit directions link"/>
+          </a>
+        </article>
+      }
     </main>
   );
 };

@@ -1,13 +1,13 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Atlas from '.';
+import MoreInfoPage from '.';
 
 
-describe('Atlas', () => {
+describe('MoreInfoPage', () => {
   let wrapper;
 
   it('should match the snapshot', () => {
-    wrapper = shallow(<Atlas />);
+    wrapper = shallow(<MoreInfoPage />);
 
     expect(wrapper).toMatchSnapshot();
   });
