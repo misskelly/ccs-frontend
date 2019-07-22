@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+// import { Loader } from '../Loader/index';
 
 const Modal = (props) => {
   const [streetAddress, setStreetAddress] = useState('');
