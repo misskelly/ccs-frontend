@@ -32,26 +32,27 @@ const Modal = (props) => {
   };
 
   return (
-    <section className="modal">
+    <article className="modal">
+      <button autoFocus={true} onClick={getUserLocation}>USE CURRENT LOCATION</button>
       {
         !canEnterAddress
         &&
-        <article>
-          <button onClick={getUserLocation}>USE CURRENT LOCATION</button>
-          <button onClick={ () => setCanEnterAddress(!canEnterAddress) }>Enter Address</button>
-        </article>
+        <button onClick={ () => setCanEnterAddress(!canEnterAddress) }>Enter Address</button>
       }
       {
         canEnterAddress
         &&
         <form onSubmit={fetchUsingAddress}>
-          <input type="text" placeholder="Street Address" onChange={(e) => setStreetAddress(e.target.value)}/>
-          <input type="number" placeholder="ZIP" onChange={(e) => setZipCode(e.target.value)}/>
-          <input type="text" placeholder="City" onChange={(e) => setCity(e.target.value)}/>
+          <input type="text" placeholder="Street Address" autoFocus={true} autocomplete="shipping street-address" onChange={(e) => setStreetAddress(e.target.value)}/>
+          <input type="number" placeholder="ZIP" autocomplete="shipping postal-code" onChange={(e) => setZipCode(e.target.value)}/>
+          <input type="text" placeholder="City" autocomplete="shipping locality" onChange={(e) => setCity(e.target.value)}/>
           <button>Submit</button>
         </form>
       }
-    </section>
+      <NavLink to="/">
+        <p>Back</p>
+      </NavLink>
+    </article>
   );
 };
 
