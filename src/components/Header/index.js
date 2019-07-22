@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <header className="header">
       <NavLink
-        className="ccs-logo-wrapper"
+        className="ccs-logo-wrapper btn"
         to="/">
         <h1 className="hidden-heading">In Crisis</h1>
         <img 

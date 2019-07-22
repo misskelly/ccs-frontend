@@ -2,20 +2,82 @@
   position: relative;
   width: 100%;
   margin: 10rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
+.home-heading,
+.help-hours-heading,
+.btn-wrapper,
 .service-desc-p {
   width: 90%;
-  margin: 0 auto;
 }
 
 .home-heading {
   @include font-size(2rem);
+  @include home-text;
   text-transform: uppercase;
   color: $white;
-  text-align: center;
+  margin: 0 0 5rem 0;
 }
 
 .under-water-span {
+  @include font-size(10rem);
   display: block;
+  color: $cream;
+  letter-spacing: .75rem;
+  text-shadow: $gray 0 .5px 1px;
+  font-weight: bold;
+}
+
+.help-hours-heading {
+  color: $gray;
+  @include home-text;
+}
+
+.btn-links-wrapper {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 0 5rem 0;
+}
+
+.btn {
+  @include outline-out;
+}
+
+
+
+.large {
+  width: 85%;
+  margin: .5rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: .2rem;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 50px;
+  align-self: center;
+  padding: .5rem 3rem;
+  background-image: linear-gradient(-225deg, $muted-blue 25%, $blue 75%);
+  &:hover,
+  &:focus {
+    background: $white;
+    color: $navy;
+  }
+  &:hover:before,
+  &:focus:before,
+  &:active:before {
+    border: $cream solid 4px;
+    border-radius: 50px;
+  }
+}
+
+.inline-link {
+  color: $blue;
+  text-decoration: none;
+  padding: 0 5px;
+  cursor: pointer;
 }

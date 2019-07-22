@@ -18,5 +18,11 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
-  background: hsl(202, 49%, 19%);
+  background: $navy;
+  color: $white;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }

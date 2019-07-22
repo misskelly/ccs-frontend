@@ -8,12 +8,16 @@ export const HomePage = () => {
     <main className="home-page">
       <h2 className="home-heading">
         When you're feeling
-        <strong className="under-water-span">
+        <span className="under-water-span">
           Under Water
-        </strong>
+        </span>
       </h2>
-      <h3 className="help-hours-heading">no-cost, confidential help is available 24/7</h3>
-      <nav aria-label="Links to access help" className="btn-wrapper">
+      <h3 className="help-hours-heading">
+        no-cost, confidential <br/> 
+        <strong>help is available 24/7</strong>
+      </h3>
+      <nav aria-label="Links to access help" 
+        className="btn-links-wrapper">
         <Button kind="call" size="large"/>
         <Button kind="text" size="large"/>
         <Button kind="walk-in" size="large"/>
@@ -22,14 +26,14 @@ export const HomePage = () => {
         role="complementary">
         { serviceText1 }
         <a 
-          className="phone-num-link" 
+          className="phone-num-link inline-link" 
           href="tel: +1-844-493-8255"> 
-          +1-844-493-TALK 
+          +1-844-493-TALK
         </a>
-        (8255), or
-        <a className="text-link" 
+        (8255), or 
+        <a className="text-link inline-link" 
           href="/">
-          text TALK to 38255
+           text TALK to 38255
         </a>
         { serviceText2 }
         <a className="ccs-website-link" 
