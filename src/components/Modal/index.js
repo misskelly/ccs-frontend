@@ -14,8 +14,15 @@ const Modal = (props) => {
   };
 
 
-  const fetchUsingAddress = () => {
-
+  const fetchUsingAddress = async () => {
+    //move line 19-23 and into a try catch to apiCalls folder in utils
+    const response = await fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${streetAddress.split(' ').join('+')},+${city},+CO&key=`);
+    if (!response.ok) {
+      throw Error('Sorry we were not able to find that.');
+    };
+    const results = response.json();
+    const { lat, lng } = results.geometry.location;
+    setUserLocation([ lat, lng ]);
   };
 
   const getUserLocation = () => {
