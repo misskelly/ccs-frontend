@@ -18,18 +18,6 @@ const MapPage = () => {
       "lng": -104.9363
   });
 
-  const getAndFetchUserLocation = () => {
-    if (window.navigator.geolocation) {
-    };
-    fetchLocations();
-  };
-
-
-
-  const fetchLocations = () => {
-    console.log('Fetchy fetch fetch')
-  };
-
   const drivingUrl = `https://www.google.com/maps/dir/?api=1&origin=${userLocation[0]},${userLocation[1]}&destination=${closestLocation.lat},${closestLocation.lng}&travelmode=driving`;
   const walkingUrl = `https://www.google.com/maps/dir/?api=1&origin=${userLocation[0]},${userLocation[1]}&destination=${closestLocation.lat},${closestLocation.lng}&travelmode=walking`;
   const transitUrl = `https://www.google.com/maps/dir/?api=1&origin=${userLocation[0]},${userLocation[1]}&destination=${closestLocation.lat},${closestLocation.lng}&travelmode=transit`;
@@ -39,24 +27,34 @@ const MapPage = () => {
 
   return (
     <section>
-      <Modal userLocation={{ userLocation: [userLocation, setUserLocation] }} />
-      {userLocation.length > 0 && <Atlas userLocation={userLocation} />}
-      <p>Center is {closestLocation.distance} miles away</p>
-      <section> 
-        <h3>GET DIRECTIONS</h3>
-        <a href={drivingUrl} target="_blank" rel="noopener noreferrer">
-          <img src={require("../../assets/images/icons/car.svg")} alt="car directions link"/>
-        </a>
-        <a href={walkingUrl} target="_blank" rel="noopener noreferrer">
-          <img src={require("../../assets/images/icons/walk.svg")} alt="walking directions link"/>
-        </a>
-        <a href={bikingUrl} target="_blank" rel="noopener noreferrer">
-          <img src={require("../../assets/images/icons/bike.svg")} alt="biking directions link"/>
-        </a>
-        <a href={transitUrl} target="_blank" rel="noopener noreferrer">
-          <img src={require("../../assets/images/icons/bus.svg")} alt="public transit directions link"/>
-        </a>
-      </section>
+      {
+        userLocation.length === 0
+        &&
+        <Modal userLocation={{ userLocation: [userLocation, setUserLocation] }} />
+      }
+      {
+        userLocation.length > 0
+        &&
+        <article>
+          <map>
+            <Atlas userLocation={userLocation} />
+          </map>
+          <p>Center is {closestLocation.distance} miles away</p>
+          <h3>GET DIRECTIONS</h3>
+          <a href={drivingUrl} target="_blank" rel="noopener noreferrer">
+            <img src={require("../../assets/images/icons/car.svg")} alt="car directions link"/>
+          </a>
+          <a href={walkingUrl} target="_blank" rel="noopener noreferrer">
+            <img src={require("../../assets/images/icons/walk.svg")} alt="walking directions link"/>
+          </a>
+          <a href={bikingUrl} target="_blank" rel="noopener noreferrer">
+            <img src={require("../../assets/images/icons/bike.svg")} alt="biking directions link"/>
+          </a>
+          <a href={transitUrl} target="_blank" rel="noopener noreferrer">
+            <img src={require("../../assets/images/icons/bus.svg")} alt="public transit directions link"/>
+          </a>
+        </article>
+      }
     </section>
   );
 };
