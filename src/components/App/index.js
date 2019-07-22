@@ -8,7 +8,7 @@ import AllCentersPage from '../AllCentersPage';
 
 const App = () => {
   return (
-    <>
+    <div className="app-wrapper">
       <Header />
       <Switch>
         <Route exact path='/' component={ HomePage } />
@@ -17,7 +17,7 @@ const App = () => {
         {/* <Route path='/more-info' component={ MoreInfoPage } /> */}
         {/* <Route path='/' component={ ErrorPage } /> */}
       </Switch>
-    </>
+    </div>
   )
 }
 

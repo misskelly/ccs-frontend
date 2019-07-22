@@ -1,0 +1,62 @@
+// --------------------------
+// COLORS
+// --------------------------
+
+$cream: hsl(50, 81%, 77%);
+$muted-blue: #347c92;
+$opaque-blue: hsla(194, 47%, 39%, 0.411);
+$gold: hsl(52, 28%, 53%);
+$blue: #38a6bc;
+$navy: #183648;
+$gray: #e2e2e2;
+$white: hsl(0, 0%, 100%);
+
+
+@mixin home-text {
+  letter-spacing: .1rem;
+  font-weight: normal;
+}
+
+@mixin outline-out {
+  outline: none;
+  transition: all .4s ease;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    -webkit-transition-property: top, right, bottom, left;
+    transition-property: top, right, bottom, left;
+  }
+
+  &:hover:before,
+  &:focus:before,
+  &:active:before {
+    top: -8px;
+    right: -8px;
+    bottom: -8px;
+    left: -8px;
+  }
+}
+
+@mixin page-component {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  margin: 5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}

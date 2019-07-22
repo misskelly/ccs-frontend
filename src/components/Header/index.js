@@ -1,18 +1,19 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import CCSlogo from  '../../assets/images/CCS_Horizontal_white.png';
 import Menu from '../Menu'
 
 const Header = () => {
   return (
     <header className="header">
       <NavLink
-        className="ccs-logo-wrapper"
+        className="ccs-logo-wrapper btn"
         to="/">
+        <h1 className="hidden-heading">In Crisis</h1>
         <img 
-          src={CCSlogo}
+          src = {require('../../assets/images/in-crisis-logo.svg')}
           className="ccs-logo-img"
-          alt="Colorado Crisis Services logo with swirly tree, link to home page"
+          alt="InCrisis logo"
+          aria-hidden="true"
         />
       </NavLink>
       <Menu />
