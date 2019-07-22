@@ -3,6 +3,7 @@
   width: 100%;
   font-size: 18px;
   font-family: 'Fira Sans', sans-serif;
+  background-image: linear-gradient(to bottom, $gray, $blue, #38a6bc, #285c72, #234f64, #1d4256, #183648, #183648, #183648, #061c29, #000000);
 }
 
 
@@ -15,4 +16,3 @@
   fill: currentColor;
   transition: fill .3s;
 }
-

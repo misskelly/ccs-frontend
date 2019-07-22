@@ -2,10 +2,15 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import Button from '../Button';
 import { serviceText1, serviceText2 } from '../../utils/text.js';
+import Water from '../../assets/images/water.png';
 
 export const HomePage = () => {
   return (
     <main className="home-page">
+      <img src={Water} 
+        className="water-img"
+        alt="view from underwater" 
+        aria-hidden="true"/>
       <h2 className="home-heading">
         When you're feeling
         <span className="under-water-span">

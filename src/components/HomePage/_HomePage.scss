@@ -1,11 +1,20 @@
 .home-page {
   position: relative;
   width: 100%;
-  margin: 10rem 0;
+  margin: 5rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+}
+
+.water-img {
+  width: 100%;
+  object-fit: cover;
+  position: relative;
+  top: 30vh;
+  overflow: hidden;
+  z-index: 10;
 }
 
 .home-heading,
@@ -18,9 +27,14 @@
 .home-heading {
   @include font-size(2rem);
   @include home-text;
+  position: relative;
   text-transform: uppercase;
   color: $white;
-  margin: 0 0 5rem 0;
+  margin: 5rem 0 10rem 0;
+  // transform: translate(-50%, calc(-50% + 1em));
+  animation-name: fadeIn;
+  animation-duration: 5s;
+  text-shadow: rgb(9, 19, 34) 0 .1rem .2rem;
 }
 
 .under-water-span {
@@ -28,8 +42,10 @@
   display: block;
   color: $cream;
   letter-spacing: .75rem;
-  text-shadow: $gray 0 .5px 1px;
+  text-shadow: rgb(9, 19, 34) 0 .2rem .4rem;
   font-weight: bold;
+  animation-name: fadeIn;
+  animation-duration: 7s;
 }
 
 .help-hours-heading {
@@ -41,7 +57,7 @@
   width: 80%;
   display: flex;
   flex-direction: column;
-  margin: 2rem 0 5rem 0;
+  margin: 0 0 5rem 0;
 }
 
 .btn {
@@ -61,16 +77,19 @@
   border-radius: 50px;
   align-self: center;
   padding: .5rem 3rem;
-  background-image: linear-gradient(-225deg, $muted-blue 25%, $blue 75%);
+  background: $muted-blue;
+  // background-image: linear-gradient(-225deg, $muted-blue 25%, $blue 75%);
+
   &:hover,
   &:focus {
     background: $white;
     color: $navy;
   }
+
   &:hover:before,
   &:focus:before,
   &:active:before {
-    border: $cream solid 4px;
+    border: $gold solid 4px;
     border-radius: 50px;
   }
 }
@@ -80,4 +99,9 @@
   text-decoration: none;
   padding: 0 5px;
   cursor: pointer;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0;}
+  100% { opacity: 1;}
 }
