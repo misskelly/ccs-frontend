@@ -27,7 +27,7 @@ describe('fetchLocationsCall', () => {
       return Promise.resolve({
         ok:true,
         json: () => Promise.resolve(
-          mockLocationsResponse;
+          mockLocationsResponse
         )
       });
     });
