@@ -10,4 +10,8 @@ export const AllCentersPage = () => (
   </main>
 );
 
+// TODO: Fetch all centers
+// TODO: map with passed props
+// TODO: get logos/links for centers
+
 export default AllCentersPage;
