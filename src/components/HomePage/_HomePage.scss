@@ -25,10 +25,9 @@
   text-transform: uppercase;
   color: $white;
   margin: 5rem 0 10rem 0;
-  // transform: translate(-50%, calc(-50% + 1em));
   animation-name: fadeIn;
   animation-duration: 5s;
-  text-shadow: rgb(9, 19, 34) 0 .1rem .2rem;
+  text-shadow: $text-shadow 0 .1rem .2rem;
 }
 
 .under-water-span {
@@ -36,7 +35,7 @@
   display: block;
   color: $cream;
   letter-spacing: .75rem;
-  text-shadow: rgb(9, 19, 34) 0 .2rem .4rem;
+  text-shadow: $text-shadow 0 .2rem .4rem;
   font-weight: bold;
   animation-name: fadeIn;
   animation-duration: 7s;
@@ -54,40 +53,8 @@
   margin: 0 0 5rem 0;
 }
 
-.btn {
-  @include outline-out;
-}
-
-
-
-.large {
-  width: 50%;
-  max-width: 400px;
-  min-width: 240px;
-  margin: .5rem;
-  font-size: 2.5rem;
-  font-weight: bold;
-  letter-spacing: .2rem;
-  display: flex;
-  justify-content: space-between;
-  border-radius: 50px;
-  align-self: center;
-  padding: .5rem 2rem;
-  background: $muted-blue;
-  // background-image: linear-gradient(-225deg, $muted-blue 25%, $blue 75%);
-
-  &:hover,
-  &:focus {
-    background: $white;
-    color: $navy;
-  }
-
-  &:hover:before,
-  &:focus:before,
-  &:active:before {
-    border: $gold solid 4px;
-    border-radius: 50px;
-  }
+.service-desc-p {
+   line-height: 1.6;
 }
 
 .inline-link {
@@ -97,7 +64,35 @@
   cursor: pointer;
 }
 
-@keyframes fadeIn {
-  0% { opacity: 0;}
-  100% { opacity: 1;}
+.footer-link {
+  display: block;
+  border: 1px solid $muted-blue;
+  border-radius: 50px;
+  color: $blue;
+  padding: .25rem;
+  margin: .75rem;
+  &:hover,
+  &:focus {
+    color: $white;
+  }
+  &:hover:before,
+  &:focus:before,
+  &:active:before {
+    border: $gold solid 2px;
+    border-radius: 50px;
+  }
+}
+
+.ccs-link-footer {
+  &:hover,
+  &:focus {
+    color: $white;
+  }
+}
+
+.ccs-logo-img {
+
+  padding: 5rem;
+  transition: transform 0.3s linear;
+  height: 9rem;
 }
