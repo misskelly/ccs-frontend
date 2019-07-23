@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
 import { fetchLocationsCall } from '../../utils/apiCalls/fetchLocationsCall';
+import { fetchLocationFromAddress } from '../../utils/apiCalls/fetchLocationFromAddress';
 // import { Loader } from '../Loader/index';
 
 const Modal = (props) => {
@@ -17,15 +18,15 @@ const Modal = (props) => {
 
 
   const fetchUsingAddress = async (e) => {
-    //move line 19-23 and into a try catch to apiCalls folder in utils
     e.preventDefault();
-    const response = await fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${streetAddress.split(' ').join('+')},+${city},+CO&key=`);
-    if (!response.ok) {
-      throw Error('Sorry we were not able to find that.');
+    try {
+      const url = `https://maps.googleapis.com/maps/api/geocode/json?address=${streetAddress.split(' ').join('+')},+${city.split(' ').join('+')},+CO&key=`;
+      const response = await fetchLocationsCall(url);
+      const { lat, lng } = response.results[0].geometry.location;
+      setUserLocation([ lat, lng ]);
+    } catch (error) {
+      console.log(error);
     };
-    const results = await response.json();
-    const { lat, lng } = results.results[0].geometry.location;
-    setUserLocation([ lat, lng ]);
   };
 
   const getUserLocation = () => {

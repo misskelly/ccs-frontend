@@ -18,7 +18,7 @@ const MapPage = () => {
   );
 
   const fetchLocations = async () => {
-    const url = 'https://cohelp-backend.herokuapp.com/api/v1/locations/sort?lat=39.7504&lng=-104.9963'
+    const url = `https://cohelp-backend.herokuapp.com/api/v1/locations/sort?lat=${userLocation[0]}&lng=${userLocation[1]}`
     const response = await fetchLocationsCall(url)
     setClosestLocation(response.locations[0])
   };
@@ -29,7 +29,6 @@ const MapPage = () => {
   const bikingUrl = `https://www.google.com/maps/dir/?api=1&origin=${userLocation[0]},${userLocation[1]}&destination=${closestLocation.lat},${closestLocation.lng}&travelmode=bicycling`;
 
 
-  console.log(closestLocation)
   return (
     <main className="map-page">
       {
