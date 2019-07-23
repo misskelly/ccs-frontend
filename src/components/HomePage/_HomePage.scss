@@ -27,7 +27,7 @@
   margin: 5rem 0 10rem 0;
   animation-name: fadeIn;
   animation-duration: 5s;
-  text-shadow: $text-shadow 0 .1rem .2rem;
+  text-shadow: $text-shadow 0 .05rem .1rem;
 }
 
 .under-water-span {
@@ -35,7 +35,7 @@
   display: block;
   color: $cream;
   letter-spacing: .75rem;
-  text-shadow: $text-shadow 0 .2rem .4rem;
+  text-shadow: $text-shadow 0 .1rem .2rem;
   font-weight: bold;
   animation-name: fadeIn;
   animation-duration: 7s;
@@ -54,7 +54,7 @@
 }
 
 .service-desc-p {
-   line-height: 1.6;
+  line-height: 1.6;
 }
 
 .inline-link {
@@ -71,10 +71,12 @@
   color: $blue;
   padding: .25rem;
   margin: .75rem;
+
   &:hover,
   &:focus {
     color: $white;
   }
+
   &:hover:before,
   &:focus:before,
   &:active:before {
@@ -84,15 +86,20 @@
 }
 
 .ccs-link-footer {
+  transition: transform 0.3s linear;
+
   &:hover,
   &:focus {
     color: $white;
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
   }
 }
 
 .ccs-link-footer {
   width: 100%;
-  height: 10rem;
+  height: 100%rem;
 }
 
 .ccs-logo-img {

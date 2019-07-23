@@ -1,10 +1,11 @@
 import React from 'react';
+import Logo from '../../assets/images/wheatridge-logo.png';
 
 const CenterInfo = () => (
   <article className="center-card">
     <header>
       <img
-        src={require('../../assets/images/wheatridge-logo.png')}
+        src={Logo}
         alt="Center logo"
         className="cover-image"
       />

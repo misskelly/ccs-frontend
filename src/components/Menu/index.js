@@ -1,10 +1,10 @@
 import React from 'react';
-import {
-  Wrapper, Button, Menu, MenuItem
+import { 
+Wrapper, Button, Menu, MenuItem 
 } from 'react-aria-menubutton';
 import { NavLink } from 'react-router-dom';
 import MenuIcon from '../../assets/images/icons/menu.svg';
-import { menuItemText } from '../../utils/text.js';
+import { menuItemText } from '../../utils/text';
 
 
 const MenuButton = () => {

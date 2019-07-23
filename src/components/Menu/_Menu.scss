@@ -1,37 +1,54 @@
-.menu-btn,
-.menu-icon-img {
-  height: 1.5rem;
+.menu-btn {
+  cursor: pointer;
+  height: 10rem;
+  @include outline-out;
 
-  &:focus:before,
-  &:active:before {
+  &:hover,
+  &:focus {
+    background: hsl(203, 54%, 15%);
+     .menu-icon-img {
+      -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+      transform: scale(1.2);
+
+    }
+  }
+
+  &:focus {
+    padding: 8rem 2rem 2.5rem 2rem;
+    margin: 0 -2.1rem 0 0;
     border: $gold solid 4px;
     border-radius: 15px;
   }
-
-  @include outline-out;
 }
 
-.menu-btn-wrapper {
-  padding: 1rem;
+.menu-icon-img {
+  height: 1.5rem;
+  transition: all 0.3s ease;
+  // padding: 1rem;
 }
+
 
 .menu-btn-wrapper {
   position: relative;
   margin: 0 1rem;
-  // width: 100%;
+  padding: 1rem;
 }
 
 .menu-ul {
-  text-align: right;
+  text-align: center;
   position: absolute;
   width: 25vh;
   top: 2rem;
-  left: -8rem;
-  padding: 0 1rem 0 0;
+  left: -9rem;
+  padding: 0;
   border-radius: 15px;
   background: $navy;
 }
 
+.menu-li {
+  border-bottom: solid 1px rgb(97, 97, 97);
+}
 
 .menu-link {
   text-transform: uppercase;
@@ -39,23 +56,31 @@
   padding: .25rem;
   width: 100%;
   letter-spacing: 2px;
+
   &:active,
   &:hover,
   &:focus {
     background: $blue;
+    outline: none;
 
     .nav-menu,
     .menu-li {
       background: $blue;
     }
   }
+}
 
-  .nav-menu {
-    &:active,
-    &:hover,
-    &:focus {
+.nav-menu {
+
+  &:active,
+  &:focus {
+    background: $blue;
+    outline: none;
+
+    .menu-link {
       background: $blue;
     }
   }
-    // padding: 0 1rem;
-  }
+}
+
+// }
