@@ -22,7 +22,7 @@ const MenuButton = () => {
 
   return (
     <Wrapper
-      className='menu-button-wrapper'
+      className='menu-btn-wrapper'
     >
       <Button className='menu-btn'>
         <img 

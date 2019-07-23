@@ -1,4 +1,17 @@
+.menu-btn,
 .menu-icon-img {
   height: 1.5rem;
-  padding: 2rem;
+  &:focus:before,
+  &:active:before {
+    border: $gold solid 4px;
+    border-radius: 15px;
+  }
+  @include outline-out;
+}
+.menu-btn-wrapper {
+  padding: 1rem;
+}
+.menu-btn-wrapper {
+  position: relative;
+  margin: 0 1rem;
 }

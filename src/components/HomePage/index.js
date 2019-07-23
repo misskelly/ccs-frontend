@@ -7,7 +7,8 @@ import Water from '../../assets/images/water.png';
 export const HomePage = () => {
   return (
     <main className="home-page">
-      <img src={Water} 
+      <img 
+        src={Water} 
         className="water-img"
         alt="view from underwater" 
         aria-hidden="true"/>
@@ -27,7 +28,8 @@ export const HomePage = () => {
         <Button kind="text" size="large"/>
         <Button kind="walk-in" size="large"/>
       </nav>
-      <p className="service-desc-p"
+      <p 
+        className="service-desc-p"
         role="complementary">
         { serviceText1 }
         <a 
@@ -36,38 +38,43 @@ export const HomePage = () => {
           +1-844-493-TALK
         </a>
         (8255), or 
-        <a className="text-link inline-link" 
+        <a 
+          className="text-link inline-link" 
           href="/">
            text TALK to 38255
         </a>
         { serviceText2 }
-        <a className="ccs-website-link" 
-          href="https://coloradocrisisservices.org/press/">
+        <a 
+          className="ccs-website-link inline-link" 
+          href="https://coloradocrisisservices.org/">
           ColoradoCrisisServices.org.
         </a>
       </p>
-      <footer>
-        <NavLink className="learn-more-link"
-          to="/more-info">
-          Service Info/FAQs
-        </NavLink>
-        <NavLink className="all-centers-link"
-          to="/more-info">
-          All Walk-In Centers
-        </NavLink>
-        <NavLink className="dev"
-          to="/more-info">
-          Development Team
-        </NavLink>
-        <NavLink
+      <footer className="info-links-footer">
+        <a  
           className="ccs-link-footer"
-          to="">
+          href="https://coloradocrisisservices.org/">
           <img 
-            src = {require('../../assets/images/CCS_Vertical_Color.png')}
+            src = {require('../../assets/images/CCS_Vertical_Reversed.png')}
             className="ccs-logo-img"
             alt="Colorado Crisis Services logo with swirly tree, link to home page"
           />
-      </NavLink>
+        </a>
+        <NavLink 
+          className="learn-more-link footer-link btn"
+          to="/more-info">
+          Service Info/FAQs
+        </NavLink>
+        <NavLink 
+          className="all-centers-link footer-link btn"
+          to="/all-centers">
+          All Walk-In Centers
+        </NavLink>
+        <NavLink 
+          className="dev-team-link footer-link btn"
+          to="/more-info">
+          Development Team
+        </NavLink>
       </footer>
     </main>
   )
