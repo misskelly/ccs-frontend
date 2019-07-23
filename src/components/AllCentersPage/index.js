@@ -1,11 +1,13 @@
-import React from 'react'
+import React from 'react';
+import Center from '../CenterInfo';
 
-export const AllCentersPage = () => {
-  return (
-    <main className="all-centers">
-      ALL CENTERS
-    </main>
-  )
-}
+export const AllCentersPage = () => (
+  <main className="all-centers">
+    <Center />
+    <Center />
+    <Center />
+    <Center />
+  </main>
+);
 
 export default AllCentersPage;
