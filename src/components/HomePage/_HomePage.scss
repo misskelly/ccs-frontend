@@ -90,9 +90,14 @@
   }
 }
 
-.ccs-logo-img {
+.ccs-link-footer {
+  width: 100%;
+  height: 10rem;
+}
 
-  padding: 5rem;
+.ccs-logo-img {
+  z-index: 15;
   transition: transform 0.3s linear;
-  height: 9rem;
+  height: 12rem;
+  margin: 5rem;
 }
