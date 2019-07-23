@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
+import { fetchLocationsCall } from '../../utils/apiCalls/fetchLocationsCall';
 // import { Loader } from '../Loader/index';
 
 const Modal = (props) => {
@@ -11,18 +12,19 @@ const Modal = (props) => {
   const {
     userLocation: [userLocation, setUserLocation]
   } = {
-    ...(props.userLocation || {})
+    ...(props.userLocation)
   };
 
 
-  const fetchUsingAddress = async () => {
+  const fetchUsingAddress = async (e) => {
     //move line 19-23 and into a try catch to apiCalls folder in utils
+    e.preventDefault();
     const response = await fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${streetAddress.split(' ').join('+')},+${city},+CO&key=`);
     if (!response.ok) {
       throw Error('Sorry we were not able to find that.');
     };
-    const results = response.json();
-    const { lat, lng } = results.geometry.location;
+    const results = await response.json();
+    const { lat, lng } = results.results[0].geometry.location;
     setUserLocation([ lat, lng ]);
   };
 
@@ -44,9 +46,9 @@ const Modal = (props) => {
         canEnterAddress
         &&
         <form onSubmit={fetchUsingAddress}>
-          <input type="text" placeholder="Street Address" autoFocus={true} autocomplete="shipping street-address" onChange={(e) => setStreetAddress(e.target.value)}/>
-          <input type="number" placeholder="ZIP" autocomplete="shipping postal-code" onChange={(e) => setZipCode(e.target.value)}/>
-          <input type="text" placeholder="City" autocomplete="shipping locality" onChange={(e) => setCity(e.target.value)}/>
+          <input type="text" placeholder="Street Address" autoFocus={true} autoComplete="shipping street-address" onChange={(e) => setStreetAddress(e.target.value)}/>
+          <input type="number" placeholder="ZIP" autoComplete="shipping postal-code" onChange={(e) => setZipCode(e.target.value)}/>
+          <input type="text" placeholder="City" autoComplete="shipping locality" onChange={(e) => setCity(e.target.value)}/>
           <button>Submit</button>
         </form>
       }
