@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Atlas from '../Atlas';
 import Modal from '../Modal';
 import { fetchLocationsCall } from '../../utils/apiCalls/fetchLocationsCall';
@@ -6,36 +6,21 @@ import { fetchLocationsCall } from '../../utils/apiCalls/fetchLocationsCall';
 const MapPage = () => {
   const [userAddress, setUserAddress] = useState('');
   const [userLocation, setUserLocation] = useState([]);
-  const [closestLocation, setClosestLocation] = useState({
-      "id": 1,
-      "name": "Denver Walk-In Crisis Services",
-      "phone": 3035041299,
-      "address": "4353 E. Colfax Avenue",
-      "city": "Denver", 
-      "state": "CO", 
-      "zip": 80220,
-      "hours": "24 hours a day, 7 days a week",
-      "lat": 39.7403,
-      "lng": -104.9363
+  const [closestLocation, setClosestLocation] = useState({});
 
-    });
+  useEffect(
+    () => {
+      if(userLocation.length) {
+        fetchLocations();
+      }
+    },
+    [userLocation]
+  );
 
-  const getAndFetchUserLocation = () => {
-    if (window.navigator.geolocation) {
-    };
-    fetchLocations();
-  };
-
-  const getUserLocation = async () => {
-    await window.navigator.geolocation.getCurrentPosition(async (position) => 
-      await setUserLocation([position.coords.latitude, position.coords.longitude])
-    );
-    fetchLocations(userLocation)
-  };
-
-  const fetchLocations = () => {
+  const fetchLocations = async () => {
     const url = 'https://cohelp-backend.herokuapp.com/api/v1/locations/sort?lat=39.7504&lng=-104.9963'
-    fetchLocationsCall(url)
+    const response = await fetchLocationsCall(url)
+    setClosestLocation(response.locations[0])
   };
 
   const drivingUrl = `https://www.google.com/maps/dir/?api=1&origin=${userLocation[0]},${userLocation[1]}&destination=${closestLocation.lat},${closestLocation.lng}&travelmode=driving`;
@@ -44,16 +29,16 @@ const MapPage = () => {
   const bikingUrl = `https://www.google.com/maps/dir/?api=1&origin=${userLocation[0]},${userLocation[1]}&destination=${closestLocation.lat},${closestLocation.lng}&travelmode=bicycling`;
 
 
-
+  console.log(closestLocation)
   return (
     <main className="map-page">
       {
-        userLocation.length === 0
+        !closestLocation.lat
         &&
         <Modal userLocation={{ userLocation: [userLocation, setUserLocation] }} />
       }
       {
-        userLocation.length > 0
+        closestLocation.lat
         &&
         <article>
           <map>
