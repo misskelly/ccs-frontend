@@ -1,5 +1,6 @@
 .map-page {
   @include page-component;
+  padding: 10rem 5rem;
 }
 
 .use-location-btn {

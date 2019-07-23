@@ -1,11 +1,17 @@
-import React from 'react'
+import React from 'react';
+import Center from '../CenterInfo';
 
-export const AllCentersPage = () => {
-  return (
-    <main className="all-centers">
-      ALL CENTERS
-    </main>
-  )
-}
+export const AllCentersPage = () => (
+  <main className="all-centers">
+    <Center />
+    <Center />
+    <Center />
+    <Center />
+  </main>
+);
+
+// TODO: Fetch all centers
+// TODO: map with passed props
+// TODO: get logos/links for centers
 
 export default AllCentersPage;

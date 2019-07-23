@@ -1,0 +1,10 @@
+.all-centers {
+  align-content: space-around;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  width: 100%;
+  margin: 5rem 0;
+  background: $muted-blue;
+}

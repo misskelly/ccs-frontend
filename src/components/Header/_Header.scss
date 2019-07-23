@@ -11,9 +11,29 @@
   border-radius: 15px;
 }
 
-.ccs-logo-img {
-  height: 7rem;
-  padding: 1rem;
+.logo-wrapper-link {
+
+  &:focus:before,
+  &:active:before {
+    border: $gold solid 4px;
+    border-radius: 15px;
+  }
+  &:hover,
+  &:focus {
+    .incrisis-logo-img {
+      transform: scale(1.1);
+    }
+  }
+
+  // &:focus {
+  //   outline: 2px dotted $gold;
+  // }
+}
+
+.incrisis-logo-img {
+  transition: transform 0.3s linear;
+  height: 6rem;
+  margin: 0 1rem;
 }
 
 .hidden-heading {
