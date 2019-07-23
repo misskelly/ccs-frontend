@@ -21,35 +21,35 @@ describe('fetchLocationsCall', () => {
       state: "CO",
       street: "4353 E Colfax Ave",
       zip: 80220
-    }
+    };
 
     window.fetch=jest.fn().mockImplementation(() => {
       return Promise.resolve({
         ok:true,
         json: () => Promise.resolve(
-          mockLocationsResponse
+          mockLocationsResponse;
         )
-      })
-    })
-  })
+      });
+    });
+  });
 
   it('should be called with the correct params', () => {
     const expected = mockUrl;
     fetchLocationsCall(mockUrl);
-    expect(window.fetch).toHaveBeenCalledWith(expected)
+    expect(window.fetch).toHaveBeenCalledWith(expected);
   });
 
   it('should return a response if the status is okay', async () => {
-    const result = await fetchLocationsCall()
-    expect(result).toEqual(mockLocationsResponse)
+    const result = await fetchLocationsCall();
+    expect(result).toEqual(mockLocationsResponse);
   });
 
   it('should return an error if the status is not okay', async () => {
     window.fetch=jest.fn().mockImplementation(() => {
       return Promise.resolve({
         ok: false
-      })
-    })
-    await expect(fetchLocationsCall()).rejects.toEqual(Error('Error fetching locations'))
+      });
+    });
+    await expect(fetchLocationsCall()).rejects.toEqual(Error('Error fetching locations'));
   });
 })
