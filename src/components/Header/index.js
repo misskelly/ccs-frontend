@@ -12,7 +12,7 @@ const Header = () => (
     >
       <h1 className="hidden-heading">In Crisis</h1>
       <img
-        src={require('../../assets/images/crisis-logo.svg')}
+        src={require('../../assets/images/in-crisis-logo.svg')}
         className="incrisis-logo-img"
         alt="InCrisis logo"
         aria-hidden="true"
