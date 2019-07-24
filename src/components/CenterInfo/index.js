@@ -9,8 +9,8 @@ const CenterInfo = (props) => {
     <article className="center-card">
       <header>
         <img
-        // src="https://www.summitstonehealth.org/wp-content/themes/summitstone/img/ss-logo-wide.svg"
-          src={logo}
+          src="https://github.com/CSheesley/ccs-frontend/blob/master/src/assets/images/wheatridge-logo.png?raw=true"
+          // src={logo}
           alt="Center logo"
           className="cover-image"
         />
@@ -25,33 +25,33 @@ const CenterInfo = (props) => {
         <address className="center-info">
           <h4 className="phone-heading addr">
           phone:
-        </h4>
+          </h4>
           <a
-          className="address-block"
-          href="tel:3034250300"
-        >
+            className="address-block"
+            href="tel:3034250300"
+          >
             (303)-425-0300
-        </a>
+          </a>
           <h4 className="link-heading addr">
           website:
-        </h4>
+          </h4>
           <a
-          className="address-block link"
-          href="https://www.jcmh.org/"
-        >
-          {website}
-        </a>
+            className="address-block link"
+            href="https://www.jcmh.org/"
+          >
+            {website}
+          </a>
           <h4 className="address-heading addr">
           address:
-        </h4>
+          </h4>
           <ul className="address-ul address-block">
-          <li className="address-li">
+            <li className="address-li">
             4643 Wadsworth Blvd
           </li>
-          <li className="address-li">
+            <li className="address-li">
             Wheat Ridge, CO 80033
           </li>
-        </ul>
+          </ul>
         </address>
       </main>
       <a

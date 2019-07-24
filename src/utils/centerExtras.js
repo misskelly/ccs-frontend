@@ -56,14 +56,14 @@ const centerExtras = [{
   website: 'https://www.aspenpointe.org/health-care-services/crisis-services-(text-call-walk-in)/crisis-stabilization-unit',
   logo: CoSprings
 },
+// {
+//   city: 'Montrose',
+//   name: 'Center for Mental Health Crisis Walk-In Center',
+//   website: 'https://www.centermh.org/crisis-walk-in-center/',
+//   logo: ''
+// },
 {
-  city: 'Montrose',
-  name: 'Center for Mental Health Crisis Walk-In Center',
-  website: 'https://www.centermh.org/crisis-walk-in-center/',
-  logo: ''
-},
-{
-  city: 'Wheatridge',
+  city: 'Wheat Ridge',
   name: 'Center for Mental Health Crisis Walk-In Center',
   website: 'https://www.centermh.org/crisis-walk-in-center/',
   logo: Wheatridge
