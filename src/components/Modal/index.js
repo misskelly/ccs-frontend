@@ -111,7 +111,7 @@ const Modal = (props) => {
             className="back-btn btn"
             to="/"
           >
-            Back
+            Go Back
           </NavLink>
         </>
       }
