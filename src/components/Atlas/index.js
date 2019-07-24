@@ -2,6 +2,7 @@ import React from 'react';
 import {
   Map, Marker, Popup, TileLayer
 } from 'react-leaflet';
+import PropTypes from 'prop-types';
 
 
 const Atlas = (props) => {
@@ -56,3 +57,7 @@ const Atlas = (props) => {
 };
 
 export default Atlas;
+
+Atlas.PropTypes = {
+  userLocation: PropTypes.object
+}

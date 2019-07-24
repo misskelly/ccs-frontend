@@ -1,5 +1,7 @@
 import React from 'react';
 import logos from '../../assets/images/center-logos';
+import PropTypes from 'prop-types';
+
 // import Logo from '../../assets/images/wheatridge-logo.png';
 const CenterInfo = (props) => {
   const {
@@ -64,3 +66,12 @@ const CenterInfo = (props) => {
   );
 };
 export default CenterInfo;
+
+CenterInfo.PropTypes = {
+  city: PropTypes.string,
+  name: PropTypes.string,
+  website: PropTypes.string,
+  logo: PropTypes.string
+}
+
+

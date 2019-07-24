@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { fetchLocationsCall } from '../../utils/apiCalls/fetchLocationsCall';
 import { fetchLocationFromAddress } from '../../utils/apiCalls/fetchLocationFromAddress';
 import { Loader } from '../Loader';
+import PropTypes from 'prop-types'
 
 const Modal = (props) => {
   const [streetAddress, setStreetAddress] = useState('');
@@ -108,3 +109,7 @@ const Modal = (props) => {
 };
 
 export default Modal;
+
+Modal.PropTypes = {
+  userLocation: PropTypes.object
+}
