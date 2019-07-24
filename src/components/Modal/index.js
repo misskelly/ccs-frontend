@@ -23,7 +23,8 @@ const Modal = (props) => {
     e.preventDefault();
     try {
       setIsLoading(true);
-      const url = `https://maps.googleapis.com/maps/api/geocode/json?address=${streetAddress.split(' ').join('+')},+${city.split(' ').join('+')},+CO&key=`;
+      const apiKey = process.env.REACT_APP_API_KEY
+      const url = `https://maps.googleapis.com/maps/api/geocode/json?address=${streetAddress.split(' ').join('+')},+${city.split(' ').join('+')},+CO&key=${apiKey}`;
       const response = await fetchLocationsCall(url);
       const { lat, lng } = response.results[0].geometry.location;
       setUserLocation([lat, lng]);
