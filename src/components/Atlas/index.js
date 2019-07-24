@@ -58,6 +58,6 @@ const Atlas = (props) => {
 
 export default Atlas;
 
-Atlas.PropTypes = {
+Atlas.propTypes = {
   userLocation: PropTypes.object
 }

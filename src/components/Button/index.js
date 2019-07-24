@@ -44,7 +44,7 @@ export class Button extends Component {
 
 export default Button;
 
-Button.PropTypes = {
+Button.propTypes = {
   kind: PropTypes.string,
   size: PropTypes.string
 }

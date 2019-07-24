@@ -67,7 +67,7 @@ const CenterInfo = (props) => {
 };
 export default CenterInfo;
 
-CenterInfo.PropTypes = {
+CenterInfo.propTypes = {
   city: PropTypes.string,
   name: PropTypes.string,
   website: PropTypes.string,

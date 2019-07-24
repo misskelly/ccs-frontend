@@ -110,6 +110,6 @@ const Modal = (props) => {
 
 export default Modal;
 
-Modal.PropTypes = {
+Modal.propTypes = {
   userLocation: PropTypes.object
 }
