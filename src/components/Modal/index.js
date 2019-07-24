@@ -1,7 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { fetchLocationsCall } from '../../utils/apiCalls/fetchLocationsCall';
-import { fetchLocationFromAddress } from '../../utils/apiCalls/fetchLocationFromAddress';
 import { Loader } from '../Loader';
 
 const Modal = (props) => {

@@ -4,7 +4,6 @@ import Modal from '../Modal';
 import { fetchLocationsCall } from '../../utils/apiCalls/fetchLocationsCall';
 
 const MapPage = () => {
-  const [userAddress, setUserAddress] = useState('');
   const [userLocation, setUserLocation] = useState([]);
   const [closestLocation, setClosestLocation] = useState({});
 
