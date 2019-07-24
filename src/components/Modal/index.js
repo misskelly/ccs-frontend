@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { fetchLocationsCall } from '../../utils/apiCalls/fetchLocationsCall';
 import { Loader } from '../Loader';
@@ -14,6 +14,10 @@ const Modal = (props) => {
   } = {
     ...(props.userLocation)
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, []);
 
   const fetchUsingAddress = async (e) => {
     e.preventDefault();
