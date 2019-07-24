@@ -40,3 +40,53 @@ export const fredRogersQuotes = [
   'In times of stress, the best thing we can do for each other is to listen with our ears and our hearts and to be assured that our questions are just as important as our answers.',
   'Anything that’s human is mentionable, and anything that is mentionable can be more manageable. When we can talk about our feelings, they become less overwhelming, less upsetting, and less scary. The people we trust with that important talk can help us know that we are not alone.'
 ];
+
+
+export const centerExtras = [
+  {
+    city: 'Boulder',
+    name: 'Mental Health Partners Walk-In Center',
+    website: 'https://www.mhpcolorado.org/crisis/'
+  },
+  {
+    city: 'Littleton',
+    name: 'All Health Network Walk-in Center',
+    website: 'https://www.allhealthnetwork.org/services/crisis-services/'
+  },
+  {
+    city: 'Denver',
+    name: 'Mental Health Center of Denver',
+    website: 'https://mhcd.org/suicide-prevention/'
+  },
+  {
+    city: 'Aurora',
+    name: 'Aurora Walk-In Crisis Services ',
+    website: 'N/A'
+  },
+  {
+    city: 'Fort Collins',
+    name: 'SummitStone Walk-In Crisis Services',
+    website: 'https://www.summitstonehealth.org/services/24-7-walk-in-crisis/'
+  },
+  {
+    city: 'Greeley',
+    name: 'North Range Crisis Support Services',
+    website: 'https://northrange.org/services/crisis-support-services/'
+  },
+  {
+    city: 'Pueblo',
+    name: 'Crisis Living Room: Emergency Crisis Services',
+    website: 'https://www.health.solutions/services/emergency-crisis-services/'
+  },
+  {
+    city: 'Colorado Springs',
+    name: 'Crisis Living Room: Emergency Crisis Services',
+    website: 'https://www.aspenpointe.org/health-care-services/crisis-services-(text-call-walk-in)/crisis-stabilization-unit'
+  },
+  {
+    city: 'Montrose',
+    name: 'Center for Mental Health Crisis Walk-In Center',
+    website: 'https://www.centermh.org/crisis-walk-in-center/'
+  }
+
+];

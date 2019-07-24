@@ -1,10 +1,12 @@
 import React from 'react';
-import Logo from '../../assets/images/wheatridge-logo.png';
+import Logo from '../../assets/images/fort-collins-logo.png';
+// import Logo from '../../assets/images/wheatridge-logo.png';
 
 const CenterInfo = () => (
   <article className="center-card">
     <header>
       <img
+        // src="https://www.summitstonehealth.org/wp-content/themes/summitstone/img/ss-logo-wide.svg"
         src={Logo}
         alt="Center logo"
         className="cover-image"
