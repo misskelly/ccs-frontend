@@ -38,7 +38,7 @@ const MapPage = () => {
       {
         closestLocation.lat
         &&
-        <article>
+        <article className="map-area">
           <map>
             <Atlas userLocation={userLocation} closestLocation={closestLocation} />
           </map>
