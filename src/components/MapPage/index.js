@@ -41,9 +41,9 @@ const MapPage = () => {
         &&
         <article>
           <map>
-            <Atlas userLocation={userLocation} />
+            <Atlas userLocation={userLocation} closestLocation={closestLocation} />
           </map>
-          <p>Center is {closestLocation.distance} miles away</p>
+          <p>{closestLocation.name} is {closestLocation.miles} miles away</p>
           <h3>GET DIRECTIONS</h3>
           <a href={drivingUrl} target="_blank" rel="noopener noreferrer">
             <img className="svg-icon car-icon" src={require("../../assets/images/icons/car.svg")} alt="car directions link"/>
