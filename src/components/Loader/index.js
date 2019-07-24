@@ -8,7 +8,7 @@ export const Loader = () => {
       <h1 className='loader-text'>
         Loading...
       </h1>
-      <p>{fredRogersQuote}</p>
+      <p>Mr. Rodgers: {fredRogersQuote}</p>
       <article className="icon-spinner"></article>
     </div>
   )
