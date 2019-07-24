@@ -4,7 +4,6 @@ import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
 
 
 const Atlas = (props) => {
-
   return (
     <Map 
       id="mapid" 
@@ -20,7 +19,9 @@ const Atlas = (props) => {
         <Popup>Your Location</Popup>
       </Marker>
       <Marker position={[props.closestLocation.lat, props.closestLocation.lng]} >
-        <Popup>Center Location</Popup>
+        <Popup>
+          {props.closestLocation.name} <br /> {props.closestLocation.street}, {props.closestLocation.zip}, {props.closestLocation.state}
+        </Popup>
       </Marker>
     </Map>
   );
