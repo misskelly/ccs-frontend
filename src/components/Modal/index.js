@@ -43,48 +43,56 @@ const Modal = (props) => {
     <article className="modal">
       {
         isLoading
-        &&        <Loader />
+        &&
+        <Loader />
       }
       {
         !isLoading
-        &&        <>
+        &&
+        <>
           <button
             className="modal-btn use-loc-btn btn"
             type="button"
             autoFocus
             onClick={getUserLocation}
           >
-              USE CURRENT LOCATION
+            USE CURRENT LOCATION
+            <img alt="current location icon" className="button-icon icon-current-location" src={require("../../assets/images/icons/get-location.svg")}/>
+          </button>
+          <button
+              className="modal-btn enter-address-btn btn"
+              type="button"
+              onClick={() => setCanEnterAddress(!canEnterAddress)}
+            >
+              Enter Address
+              <img alt="enter address icon" className="button-icon" src={require("../../assets/images/icons/location.svg")}/>
           </button>
           {
-            !canEnterAddress
-            &&              <button
-                className="modal-btn enter-address-btn btn"
-                type="button"
-                onClick={() => setCanEnterAddress(!canEnterAddress)}
-              >
-                Enter Address
-              </button>
-          }
-          {
             canEnterAddress
-            &&            <form onSubmit={fetchUsingAddress}>
-              {/* TODO: Add labels to form fields!! */}
+            &&
+            <form className="address-form" onSubmit={fetchUsingAddress}>
+              <label htmlFor="street-address">Street Address</label>
               <input
+                name="street-address"
                 className="modal-input street-input"
                 type="text"
+                autoFocus={true}
                 placeholder="Street Address"
                 autoComplete="shipping street-address"
                 onChange={e => setStreetAddress(e.target.value)}
               />
+              <label htmlFor="zip-code">ZIP Code</label>
               <input
+                name="zip-code"
                 className="modal-input zip-input"
                 type="number"
                 placeholder="ZIP"
                 autoComplete="shipping postal-code"
                 onChange={e => setZipCode(e.target.value)}
               />
+              <label htmlFor="city">City</label>
               <input
+                name="city"
                 className="modal-input city-input"
                 type="text"
                 placeholder="City"
