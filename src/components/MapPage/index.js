@@ -45,16 +45,16 @@ const MapPage = () => {
           <p>{closestLocation.name} is {closestLocation.miles} miles away</p>
           <h3>GET DIRECTIONS</h3>
           <a href={drivingUrl} target="_blank" rel="noopener noreferrer">
-            <img className="svg-icon car-icon" src={require("../../assets/images/icons/car.svg")} alt="car directions link"/>
+            <img className="svg-icon directions-icon car-icon" src={require("../../assets/images/icons/car.svg")} alt="car directions link"/>
           </a>
           <a href={walkingUrl} target="_blank" rel="noopener noreferrer">
-            <img className="svg-icon walk-icon" src={require("../../assets/images/icons/walk.svg")} alt="walking directions link"/>
+            <img className="svg-icon directions-icon walk-icon" src={require("../../assets/images/icons/walk.svg")} alt="walking directions link"/>
           </a>
           <a href={bikingUrl} target="_blank" rel="noopener noreferrer">
-            <img className="svg-icon bike-icon" src={require("../../assets/images/icons/bike.svg")} alt="biking directions link"/>
+            <img className="svg-icon directions-icon bike-icon" src={require("../../assets/images/icons/bike.svg")} alt="biking directions link"/>
           </a>
           <a href={transitUrl} target="_blank" rel="noopener noreferrer">
-            <img className="svg-icon bus-icon"src={require("../../assets/images/icons/bus.svg")} alt="public transit directions link"/>
+            <img className="svg-icon directions-icon bus-icon"src={require("../../assets/images/icons/bus.svg")} alt="public transit directions link"/>
           </a>
         </article>
       }
