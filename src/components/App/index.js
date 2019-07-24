@@ -1,24 +1,21 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Header from '../Header';
-import HomePage from '../HomePage';
+import Home from '../HomePage';
 import MapPage from '../MapPage';
-import AllCentersPage from '../AllCentersPage';
-import MoreInfoPage from '../MoreInfoPage';
+import AllCenters from '../AllCentersPage';
+import MoreInfo from '../MoreInfoPage';
 
-const App = () => {
-  return (
-    <div className="app-wrapper">
-      <Header />
-      <Switch>
-        <Route exact path='/' component={ HomePage } />
-        <Route path='/walk-in' component={ MapPage } />
-        <Route path='/all-centers' component={ AllCentersPage } />
-        <Route path='/more-info' component={ MoreInfoPage } />
-        {/* <Route path='/' component={ ErrorPage } /> */}
-      </Switch>
-    </div>
-  )
-}
+const App = () => (
+  <div className="app-wrapper">
+    <Header />
+    <Switch>
+      <Route exact path="/" component={Home} />
+      <Route path="/walk-in" component={MapPage} />
+      <Route path="/all-centers" component={AllCenters} />
+      <Route path="/more-info" component={MoreInfo} />
+    </Switch>
+  </div>
+);
 
 export default App;

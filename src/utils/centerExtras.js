@@ -12,7 +12,7 @@ const centerExtras = [{
   city: 'Boulder',
   name: 'Mental Health Partners Walk-In Center',
   website: 'https://www.mhpcolorado.org/crisis/',
-  logo: 'https://github.com/CSheesley/ccs-frontend/blob/all-centers-pg/src/assets/images/center-logos/boulder-logo.pnghttps://github.com/CSheesley/ccs-frontend/blob/master/src/assets/images/wheatridge-logo.png?raw=true'
+  logo: 'https://github.com/CSheesley/ccs-frontend/blob/all-centers-pg/src/assets/images/center-logos/boulder-logo.png?raw=true'
 },
 {
   city: 'Littleton',
@@ -28,7 +28,7 @@ const centerExtras = [{
 },
 {
   city: 'Aurora',
-  name: 'Aurora Walk-In Crisis Services ',
+  name: 'Aurora Walk-In Crisis Services',
   website: 'N/A',
   logo: 'https://github.com/CSheesley/ccs-frontend/blob/all-centers-pg/src/assets/images/CCS_Horizontal_Color.png?raw=true'
 },

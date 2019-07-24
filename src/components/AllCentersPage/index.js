@@ -14,8 +14,8 @@ export const AllCentersPage = () => {
   ));
   return (
     <main className="all-centers">
-    {centers}
-  </main>
+      {centers}
+    </main>
   );
 };
 // TODO: Fetch all centers
