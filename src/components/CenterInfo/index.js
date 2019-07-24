@@ -1,47 +1,50 @@
 import React from 'react';
-import Logo from '../../assets/images/fort-collins-logo.png';
+import logos from '../../assets/images/center-logos';
 // import Logo from '../../assets/images/wheatridge-logo.png';
-
-const CenterInfo = () => (
-  <article className="center-card">
-    <header>
-      <img
+const CenterInfo = (props) => {
+  const {
+    city, name, website, logo
+  } = props;
+  return (
+    <article className="center-card">
+      <header>
+        <img
         // src="https://www.summitstonehealth.org/wp-content/themes/summitstone/img/ss-logo-wide.svg"
-        src={Logo}
-        alt="Center logo"
-        className="cover-image"
-      />
-      <div className="hours">
+          src={logo}
+          alt="Center logo"
+          className="cover-image"
+        />
+        <div className="hours">
         24/7
-      </div>
-    </header>
-    <main className="card-main">
-      <h3 className="center-name">
-        Crisis & Recovery Center
-      </h3>
-      <address className="center-info">
-        <h4 className="phone-heading addr">
+        </div>
+      </header>
+      <main className="card-main">
+        <h3 className="center-name">
+          {name}
+        </h3>
+        <address className="center-info">
+          <h4 className="phone-heading addr">
           phone:
         </h4>
-        <a
+          <a
           className="address-block"
           href="tel:3034250300"
         >
             (303)-425-0300
         </a>
-        <h4 className="link-heading addr">
+          <h4 className="link-heading addr">
           website:
         </h4>
-        <a
+          <a
           className="address-block link"
           href="https://www.jcmh.org/"
         >
-          www.jcmh.org
+          {website}
         </a>
-        <h4 className="address-heading addr">
+          <h4 className="address-heading addr">
           address:
         </h4>
-        <ul className="address-ul address-block">
+          <ul className="address-ul address-block">
           <li className="address-li">
             4643 Wadsworth Blvd
           </li>
@@ -49,15 +52,15 @@ const CenterInfo = () => (
             Wheat Ridge, CO 80033
           </li>
         </ul>
-      </address>
-    </main>
-    <a
-      className="map-link"
-      href="https://www.jcmh.org/"
-    >
+        </address>
+      </main>
+      <a
+        className="map-link"
+        href="https://www.jcmh.org/"
+      >
         view on map
-    </a>
-  </article>
-);
-
+      </a>
+    </article>
+  );
+};
 export default CenterInfo;
