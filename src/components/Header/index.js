@@ -1,6 +1,8 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import Menu from '../Menu';
+import Button from '../Button';
+import Logo from '../../assets/images/in-crisis-logo.svg';
 
 // TODO: Add animation to dropdown,
 // TODO: call and text links
@@ -12,12 +14,13 @@ const Header = () => (
     >
       <h1 className="hidden-heading">In Crisis</h1>
       <img
-        src={require('../../assets/images/in-crisis-logo.svg')}
+        src={Logo}
         className="incrisis-logo-img"
         alt="InCrisis logo"
         aria-hidden="true"
       />
     </NavLink>
+    <Button kind="call" size="small" />
     <Menu />
   </header>
 );
