@@ -3,9 +3,24 @@ import { faqs } from '../../assets/staticData/staticFAQ';
 
 const MoreInfoPage = () => {
   const [answer, setAnswer] = useState('');
+  const [pageY, setPageY] = useState(0);
 
-  const questions = faqs.map((faq, index) => {
-    return <p className="faq-question" role="button" aria-pressed="false" key={index} onClick={ () => setAnswer(faq.answer) }> {faq.question} </p>
+  const questions = faqs.map((faq) => {
+    return <p
+      className="faq-question"
+      role="button"
+      aria-pressed="false"
+      key={faq.id}
+      onClick={
+        (e) => {
+          e.persist();
+          setAnswer(faq.answer);
+          setPageY(e.pageY);
+        }
+      }
+    >
+      {faq.question}
+    </p>
   });
 
 
