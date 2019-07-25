@@ -50,6 +50,9 @@ npm test
 * Rspec
 * CircleCI
 
+## Circle CI:
+[![CircleCI](https://circleci.com/gh/CSheesley/ccs-frontend.svg?style=svg)](https://circleci.com/gh/CSheesley/ccs-frontend)
+
 ## Authors:
 
 [Corey Sheesley](https://github.com/CSheesley)

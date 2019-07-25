@@ -1,6 +1,17 @@
 .map-page {
   @include page-component;
-  padding: 10rem 5rem;
+  padding: 4rem .5rem;
+}
+
+.map-area {
+  p {
+    margin-top: 2rem;
+  };
+};
+
+.directions-icon {
+  margin: 0 .5rem;
+  color: $muted-blue;
 }
 
 .use-location-btn {

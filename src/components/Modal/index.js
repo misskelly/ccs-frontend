@@ -1,7 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { fetchLocationsCall } from '../../utils/apiCalls/fetchLocationsCall';
-import { fetchLocationFromAddress } from '../../utils/apiCalls/fetchLocationFromAddress';
 import { Loader } from '../Loader';
 import PropTypes from 'prop-types'
 
@@ -17,11 +16,16 @@ const Modal = (props) => {
     ...(props.userLocation)
   };
 
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, []);
+
   const fetchUsingAddress = async (e) => {
     e.preventDefault();
     try {
       setIsLoading(true);
-      const url = `https://maps.googleapis.com/maps/api/geocode/json?address=${streetAddress.split(' ').join('+')},+${city.split(' ').join('+')},+CO&key=`;
+      const apiKey = process.env.REACT_APP_API_KEY
+      const url = `https://maps.googleapis.com/maps/api/geocode/json?address=${streetAddress.split(' ').join('+')},+${city.split(' ').join('+')},+CO&key=${apiKey}`;
       const response = await fetchLocationsCall(url);
       const { lat, lng } = response.results[0].geometry.location;
       setUserLocation([lat, lng]);
@@ -40,48 +44,56 @@ const Modal = (props) => {
     <article className="modal">
       {
         isLoading
-        &&        <Loader />
+        &&
+        <Loader />
       }
       {
         !isLoading
-        &&        <>
+        &&
+        <>
           <button
             className="modal-btn use-loc-btn btn"
             type="button"
             autoFocus
             onClick={getUserLocation}
           >
-              USE CURRENT LOCATION
+            USE CURRENT LOCATION
+            <img alt="current location icon" className="button-icon icon-current-location" src={require("../../assets/images/icons/get-location.svg")}/>
+          </button>
+          <button
+              className="modal-btn enter-address-btn btn"
+              type="button"
+              onClick={() => setCanEnterAddress(!canEnterAddress)}
+            >
+              Enter Address
+              <img alt="enter address icon" className="button-icon" src={require("../../assets/images/icons/location.svg")}/>
           </button>
           {
-            !canEnterAddress
-            &&              <button
-                className="modal-btn enter-address-btn btn"
-                type="button"
-                onClick={() => setCanEnterAddress(!canEnterAddress)}
-              >
-                Enter Address
-              </button>
-          }
-          {
             canEnterAddress
-            &&            <form onSubmit={fetchUsingAddress}>
-              {/* TODO: Add labels to form fields!! */}
+            &&
+            <form className="address-form" onSubmit={fetchUsingAddress}>
+              <label htmlFor="street-address">Street Address</label>
               <input
+                name="street-address"
                 className="modal-input street-input"
                 type="text"
+                autoFocus={true}
                 placeholder="Street Address"
                 autoComplete="shipping street-address"
                 onChange={e => setStreetAddress(e.target.value)}
               />
+              <label htmlFor="zip-code">ZIP Code</label>
               <input
+                name="zip-code"
                 className="modal-input zip-input"
                 type="number"
                 placeholder="ZIP"
                 autoComplete="shipping postal-code"
                 onChange={e => setZipCode(e.target.value)}
               />
+              <label htmlFor="city">City</label>
               <input
+                name="city"
                 className="modal-input city-input"
                 type="text"
                 placeholder="City"
@@ -100,7 +112,7 @@ const Modal = (props) => {
             className="back-btn btn"
             to="/"
           >
-            Back
+            Go Back
           </NavLink>
         </>
       }
