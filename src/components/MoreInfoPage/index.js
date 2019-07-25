@@ -30,16 +30,17 @@ const MoreInfoPage = () => {
       {
         answer
         &&
-        <>
-          <p className="faq-answer">{answer}</p>
-          <img 
+        <div className="answer-modal" style={{ transform: `translate(0, ${pageY}px)` }} role="dialog" aria-labelledby="dialog1Title" aria-describedby="dialog1Desc">
+          <h2 id="dialog1Title">Answer:</h2>
+          <p id="dialog1Desc" className="faq-answer">{answer}</p>
+          <img
             className="x-button"
             alt="close answer modal icon"
             role="button" 
             src={require("../../assets/images/icons/cancel-x.svg")}
             onClick={ () => setAnswer('') }
           />
-        </>
+        </div>
       }
     </section>
   );
