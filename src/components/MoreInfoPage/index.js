@@ -18,6 +18,7 @@ const MoreInfoPage = () => {
         <aside>
           <p>{answer}</p>
           <img 
+            alt="close answer modal icon"
             role="button" 
             src={require("../../assets/images/icons/cancel-x.svg")}
             onClick={ () => setAnswer('') }
