@@ -23,7 +23,6 @@ export const HomePage = () => (
       Select an option to get
       <br />
       no cost, confidential help
-      <br />
       <strong> NOW</strong>
     </h3>
     <nav
@@ -36,7 +35,7 @@ export const HomePage = () => (
     </nav>
     <h4 className="home-hours help-hours-heading">
       All services available 24/7/365
-      </h4>
+    </h4>
     <p
       className="service-desc-p"
       role="complementary"
@@ -86,12 +85,12 @@ export const HomePage = () => (
       >
           All Walk-In Centers
       </NavLink>
-      <NavLink
+      {/* <NavLink
         className="dev-team-link footer-link btn"
         to="/more-info"
       >
           Development Team
-      </NavLink>
+      </NavLink> */}
     </footer>
   </main>
 );
