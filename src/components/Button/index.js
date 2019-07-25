@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 import Phone from '../../assets/images/icons/phone';
 import Text from '../../assets/images/icons/text';
 import WalkIn from '../../assets/images/icons/walkIn';
+import PropTypes from 'prop-types';
 
 
 
@@ -42,3 +43,8 @@ export class Button extends Component {
 
 
 export default Button;
+
+Button.propTypes = {
+  kind: PropTypes.string,
+  size: PropTypes.string
+}

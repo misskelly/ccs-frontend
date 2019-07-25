@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { fetchLocationsCall } from '../../utils/apiCalls/fetchLocationsCall';
 import { Loader } from '../Loader';
+import PropTypes from 'prop-types'
 
 const Modal = (props) => {
   const [streetAddress, setStreetAddress] = useState('');
@@ -120,3 +121,7 @@ const Modal = (props) => {
 };
 
 export default Modal;
+
+Modal.propTypes = {
+  userLocation: PropTypes.object
+}

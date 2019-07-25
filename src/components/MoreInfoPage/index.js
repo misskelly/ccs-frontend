@@ -5,25 +5,26 @@ const MoreInfoPage = () => {
   const [answer, setAnswer] = useState('');
 
   const questions = faqs.map((faq, index) => {
-    return <p role="button" aria-pressed="false" key={index} onClick={ () => setAnswer(faq.answer) }> {faq.question} </p>
+    return <p className="faq-question" role="button" aria-pressed="false" key={index} onClick={ () => setAnswer(faq.answer) }> {faq.question} </p>
   });
 
 
   return (
-    <section>
+    <section className="faq-container">
       {questions}
       {
         answer
         &&
-        <aside>
-          <p>{answer}</p>
+        <>
+          <p className="faq-answer">{answer}</p>
           <img 
+            className="x-button"
             alt="close answer modal icon"
             role="button" 
             src={require("../../assets/images/icons/cancel-x.svg")}
             onClick={ () => setAnswer('') }
           />
-        </aside>
+        </>
       }
     </section>
   );
