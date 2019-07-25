@@ -11,9 +11,20 @@
 }
 
 .all-centers-heading {
-  @include font-size(4rem);
-  color: $cream;
-  margin: 5rem 0;
+  @include font-size(5rem);
+  // color: $cream;
+  margin: 5rem 3rem 1rem 3rem;
   letter-spacing: .3rem;
-  text-shadow: $text-shadow 0 .05rem .1rem;
+  text-shadow: $blue 0 .05rem .1rem;
+  text-align: center;
+}
+
+
+
+.center-city-heading {
+  margin: 0;
+}
+
+.center-hours {
+  margin: 0 3rem 5rem 3rem;
 }
