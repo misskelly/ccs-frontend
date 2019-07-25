@@ -1,0 +1,36 @@
+@import './variables';
+@import "~rfs/scss";
+@import '../../components/AllCentersPage/AllCentersPage';
+@import '../../components/App/App';
+@import '../../components/Button/Button';
+@import '../../components/CenterInfo/CenterInfo';
+@import '../../components/Header/Header';
+@import '../../components/HomePage/HomePage';
+@import '../../components/MapPage/MapPage';
+@import '../../components/Modal/Modal';
+@import '../../components/Menu/Menu';
+@import '../../components/Atlas/Atlas';
+// @import '../../components/Loader/Loader';
+@import '../../components/MoreInfoPage/MoreInfoPage';
+
+
+
+body {
+  margin: 0;
+  font-size: 18px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  background: $navy;
+  color: $white;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+li,
+ul {
+  list-style-type: none;
+  padding: 0;
+}

@@ -1,0 +1,127 @@
+.home-page {
+  @include page-component;
+}
+
+.water-img {
+  width: 100%;
+  object-fit: cover;
+  position: relative;
+  top: 30vh;
+  overflow: hidden;
+  z-index: 6;
+}
+
+.home-heading,
+.help-hours-heading,
+.btn-wrapper,
+.service-desc-p {
+  width: 90%;
+}
+
+.home-heading {
+  @include font-size(2rem);
+  @include home-text;
+  position: relative;
+  text-transform: uppercase;
+  color: $gray;
+  margin: 0 0 5rem 0;
+  animation-name: fadeIn;
+  animation-duration: 5s;
+  text-shadow: $blue 0 .05rem .1rem;
+}
+
+.under-water-span {
+  @include font-size(10rem);
+  display: block;
+  color: $gray;
+  letter-spacing: .75rem;
+  text-shadow: $text-shadow 0 .1rem .2rem;
+  font-weight: bold;
+  animation-name: fadeIn;
+  animation-duration: 7s;
+}
+
+.help-hours-heading {
+  @include font-size(1rem);
+  color: $cream;
+  @include home-text;
+  margin: .5rem 0;
+}
+
+.home-hours {
+  font-weight: 300;
+  margin: 0 0 1rem 0;
+}
+
+.btn-links-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 0 0;
+}
+
+.service-desc-p {
+  margin: 5rem 3rem;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+.inline-link {
+  color: $blue;
+  text-decoration: none;
+  padding: 0 5px;
+  cursor: pointer;
+}
+
+.footer-link {
+  display: block;
+  border: 1px solid $muted-blue;
+  border-radius: 50px;
+  color: $blue;
+  padding: .25rem;
+  margin: .75rem 2rem;
+
+  &:hover,
+  &:focus {
+    color: $white;
+  }
+
+  &:hover:before,
+  &:focus:before,
+  &:active:before {
+    border: $gold solid 2px;
+    border-radius: 50px;
+  }
+}
+
+.ccs-link-footer {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  transition: transform 0.3s linear;
+  outline: none;
+  &:focus {
+    .ccs-logo-img {
+      border: 4px solid $gold;
+      border-radius:  10px;
+    }
+    
+  }
+  
+  &:hover,
+  &:focus {
+      .ccs-logo-img {
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+      }
+  }
+}
+
+.ccs-logo-img {
+  z-index: 15;
+  transition: transform 0.3s linear;
+  height: 12rem;
+  margin: 5rem;
+  padding: 1rem;
+}

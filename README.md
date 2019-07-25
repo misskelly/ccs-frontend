@@ -1,68 +1,64 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# InCrisis
 
-## Available Scripts
+## Abstract:
 
-In the project directory, you can run:
+We created InCrisis because we saw a need for people to be able to access Colorado Crisis Services on an app for more efficient support in time of crisis. Currently, CCS only has a desktop version that people can access on their laptops/home computers/mobile devices.
 
-### `npm start`
+[FE Deployment](https://incrisis.herokuapp.com/)
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+[BE Deployment](https://cohelp-backend.herokuapp.com)
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+[BE Repo](https://github.com/CSheesley/ccs_cross_poll_backend)
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Setup:
 
-### `npm run build`
+First, clone down the repo.
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+git clone 
+```
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+Once you have cloned the repo, install the library dependencies. Run:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+npm install
+```
 
-### `npm run eject`
+To run tests in the program, Run:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```bash
+npm test
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## GIF of project:
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+![maybe](https://user-images.githubusercontent.com/40863560/61754544-cc79fd80-ad70-11e9-8239-e92bcb361ba4.gif)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## Technologies used:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* fetch API
+* ReactJS 
+* React Router v4
+* React hooks 
+* PostgresSQL 11
+* Ruby on Rails
+* JSX 
+* SCSS
+* Enzyme/Jest
+* Rspec
+* CircleCI
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Circle CI:
+[![CircleCI](https://circleci.com/gh/CSheesley/ccs-frontend.svg?style=svg)](https://circleci.com/gh/CSheesley/ccs-frontend)
 
-### Code Splitting
+## Authors:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+[Corey Sheesley](https://github.com/CSheesley)
 
-### Analyzing the Bundle Size
+[Brennan Duffey](https://github.com/BrennanDuffey)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+[Kelly Zick](https://github.com/misskelly/)
 
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+[Sally Haefling](https://github.com/SallyHaefling)
