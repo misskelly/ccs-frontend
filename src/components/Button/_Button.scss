@@ -17,7 +17,6 @@
   padding: .5rem 2rem;
   background: $muted-blue;
 
-  // background-image: linear-gradient(-225deg, $muted-blue 25%, $blue 75%);
   &:hover,
   &:focus {
     background: $white;
@@ -32,6 +31,18 @@
   }
 }
 
+.small {
+  transition: all 0.3s ease;
+  align-self: center;
+  @include menu-btn;
+  &:hover,
+  &:focus {
+    color: $white;
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+}
 
 
 @keyframes fadeIn {

@@ -6,17 +6,12 @@ export const menuItemText = [
     class: 'home-menu-link menu-link'
   },
   {
-    text: 'About Services',
+    text: 'About',
     path: '/more-info',
     class: 'about-menu-link menu-link'
   },
   {
-    text: 'FAQs',
-    path: '/more-info',
-    class: 'faq-menu-link menu-link'
-  },
-  {
-    text: 'Closest Crisis Center',
+    text: 'Find Center',
     path: '/walk-in',
     class: 'walk-in-menu-link menu-link'
   },

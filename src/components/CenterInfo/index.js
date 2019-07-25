@@ -5,14 +5,13 @@ import PropTypes from 'prop-types';
 // import Logo from '../../assets/images/wheatridge-logo.png';
 const CenterInfo = (props) => {
   const {
-    city, name, website, logo
+    name, website, logo
   } = props;
   return (
     <article className="center-card">
       <header>
         <img
-          src="https://github.com/CSheesley/ccs-frontend/blob/master/src/assets/images/wheatridge-logo.png?raw=true"
-          // src={logo}
+          src={logo}
           alt="Center logo"
           className="cover-image"
         />
@@ -39,7 +38,9 @@ const CenterInfo = (props) => {
           </h4>
           <a
             className="address-block link"
-            href="https://www.jcmh.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+            href={website}
           >
             {website}
           </a>
@@ -49,10 +50,10 @@ const CenterInfo = (props) => {
           <ul className="address-ul address-block">
             <li className="address-li">
             4643 Wadsworth Blvd
-          </li>
+            </li>
             <li className="address-li">
             Wheat Ridge, CO 80033
-          </li>
+            </li>
           </ul>
         </address>
       </main>
