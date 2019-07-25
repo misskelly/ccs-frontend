@@ -12,8 +12,7 @@ const CenterInfo = (props) => {
     city
   } = props;
 
-  const queryParams = `${address.street.split(' ').join('+')}+${address.zip}`;
-  console.log(queryParams);
+  const queryParams = address && `${address.street.split(' ').join('+')}+${address.zip}`;
 
   const phoneNum = (num) => {
     const cleaned = (`${num}`).replace(/\D/g, '');
@@ -53,10 +52,13 @@ const CenterInfo = (props) => {
           address:
           </h4>
           <a href={`https://www.google.com/maps/search/?api=1&query=${queryParams}`} target="_blank" rel="noopener noreferrer">
-            <ul className="address-ul address-block" aria-label="center address">
-              <li>{address.street}</li>
-              <li>{`${address.city}, CO ${address.zip}`}</li>
-            </ul>
+            {address !== undefined && (
+              <ul className="address-ul address-block" aria-label="center address">
+                <li>{address.street}</li>
+                <li>{`${address.city}, CO ${address.zip}`}</li>
+              </ul>
+            )
+            }
           </a>
         </address>
       </main>
