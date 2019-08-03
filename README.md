@@ -62,3 +62,17 @@ npm test
 [Kelly Zick](https://github.com/misskelly/)
 
 [Sally Haefling](https://github.com/SallyHaefling)
+
+
+
+<!-- AGILE/GIT WORKFLOW -->
+<!-- Epics for user stories -->
+<!-- Project Board and issues for smaller break down -->
+<!-- Work on squashing commit -->
+<!-- wtf is QA -->
+
+<!-- Group PRs by groups of stories -->
+
+<!-- If I joined your team today, how easily could I join the team as quickly as possible -->
+
+   
