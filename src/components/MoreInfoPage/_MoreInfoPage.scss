@@ -9,13 +9,17 @@
 }
 
 .faq-question {
-  font-size: 24px;
+  font-size: 20px;
   cursor: pointer;
   color: $navy;
   width: 90%;
-  text-transform: lowercase;
+  background: $gray;
+  border-radius: 5px;
+  padding: .5rem;
+  letter-spacing: 1px;
   &:hover {
     color: $white;
+    background: $navy;
   }
   &:first-letter {
     text-transform: uppercase;
