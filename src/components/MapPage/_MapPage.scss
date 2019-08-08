@@ -1,8 +1,11 @@
 .map-page {
   @include page-component;
-  padding: 4rem .5rem;
+  padding: 4rem 0.5rem;
 }
 
+.map-area {
+  width: 85%;
+}
 .center-distance-text {
   margin: 3rem auto 5rem auto;
   width: 70%;
@@ -11,7 +14,7 @@
 .directions-icon {
   height: 4rem;
   width: 4rem;
-  margin: 0 .5rem;
+  margin: 0 0.5rem;
   background: $muted-blue;
   border: 4px solid $muted-blue;
   border-radius: 10px;
@@ -22,7 +25,6 @@
   border: 2px solid black;
 }
 
-
 .get-directions-heading {
   margin: 2rem;
   letter-spacing: 3px;
@@ -32,6 +34,8 @@
 .directions-wrapper {
   display: flex;
   justify-content: space-between;
+  width: 24rem;
+  margin: 0 auto;
 }
 .map-btn-text {
   color: transparent;
@@ -39,14 +43,12 @@
 }
 .map-icon-link {
   &:focus,
-  &:hover{
-    .directions-icon{
+  &:hover {
+    .directions-icon {
       border: 4px solid $gold;
     }
-    .map-btn-text{
+    .map-btn-text {
       color: $gold;
     }
   }
 }
-
-
