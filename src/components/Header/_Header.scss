@@ -11,14 +11,11 @@
   border-radius: 15px;
 }
 
-
 .logo-wrapper-link {
-
   &:hover {
     .incrisis-logo-img {
       transform: scale(1.1);
     }
-    
   }
   &:focus {
     .incrisis-logo-img {
@@ -26,19 +23,19 @@
       border-radius: 15px;
     }
   }
-
-
 }
 
 .incrisis-logo-img {
-
   transition: transform 0.3s linear;
   height: 6rem;
   margin: 0 auto;
 }
 
-.hidden-heading {
+.hidden-text {
   font-size: 0px;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
   color: transparent;
   margin: 0;
 }
