@@ -5,6 +5,7 @@
 
 .map-area {
   width: 85%;
+  min-width: 300px;
 }
 .center-distance-text {
   margin: 3rem auto 5rem auto;
@@ -12,8 +13,8 @@
 }
 
 .directions-icon {
-  height: 4rem;
-  width: 4rem;
+  height: 3.5rem;
+  width: 3.5rem;
   margin: 0 0.5rem;
   background: $muted-blue;
   border: 4px solid $muted-blue;
@@ -34,7 +35,8 @@
 .directions-wrapper {
   display: flex;
   justify-content: space-between;
-  width: 24rem;
+  width: 100%;
+  max-width: 550px;
   margin: 0 auto;
 }
 .map-btn-text {
