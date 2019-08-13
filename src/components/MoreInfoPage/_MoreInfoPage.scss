@@ -21,6 +21,7 @@
   position: relative;
 }
 
+.reasons-ul,
 .questions-wrapper {
   width: 100%;
   @include tablet-up {
@@ -28,6 +29,11 @@
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 0 1rem;
   }
+}
+
+.reasons-li {
+  margin: 0.5rem 1rem;
+  list-style: circle;
 }
 
 .faq-question {
@@ -77,6 +83,7 @@
 }
 
 .close-answer-btn {
+  text-align: left;
   cursor: pointer;
   height: 2rem;
   width: 2rem;
