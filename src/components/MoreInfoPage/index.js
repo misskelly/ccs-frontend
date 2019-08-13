@@ -55,9 +55,9 @@ const MoreInfoPage = () => {
     'domestic violence',
     'homelessness',
     'disability',
-    'concerns for a friend or family member',
     'recovery support',
-    'resource questions'
+    'resource questions',
+    'concerns for a friend or family member'
   ];
 
   return (

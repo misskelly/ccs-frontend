@@ -26,7 +26,7 @@
   &:hover:before,
   &:focus:before,
   &:active:before {
-    border: $gold solid 4px;
+    border: $focus-ring;
     border-radius: $oval;
   }
 }
@@ -34,25 +34,39 @@
 .small {
   transition: all 0.3s ease;
 
-  &:hover:before,
+  // &:hover:before,
   &:focus:before,
   &:active:before {
-    border: $gold solid 4px;
-    border-radius: 15px;
+    .phone-icon {
+      border: $focus-ring;
+      border-radius: 15px;
+    }
   }
 
   &:hover,
   &:focus {
-    color: $white;
-    -webkit-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    transform: scale(1.2);
-    margin: 0;
-    padding: 0.2rem 0 0.2rem 0.5rem;
+    .phone-icon {
+      -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+      transform: scale(1.2);
+    }
+    // margin: 0;
+  }
+  &:focus {
+    .phone-icon {
+      border: $focus-ring;
+      border-radius: 15px;
+      height: 3rem;
+      width: 3rem;
+      margin: 0.4rem;
+      padding: 0.3rem;
+    }
   }
 }
 
-.call-btn {
+.phone-icon {
+  transition: transform 0.3s linear;
+  margin: 0 auto;
 }
 
 @keyframes fadeIn {

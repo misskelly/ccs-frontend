@@ -19,8 +19,9 @@
   }
   &:focus {
     .incrisis-logo-img {
-      border: $gold solid 4px;
+      border: $focus-ring;
       border-radius: 15px;
+      transform: scale(1.1);
     }
   }
 }
