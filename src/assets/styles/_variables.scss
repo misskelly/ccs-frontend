@@ -9,10 +9,17 @@ $gold: hsl(52, 28%, 53%);
 $opaque-gold: hsl(52, 28%, 53%);
 $blue: hsl(190, 54%, 48%);
 $navy: hsl(203, 50%, 19%);
-$dark-navy: hsl(203, 50%, 13%);
+$dark-navy: #102531;
 $gray: hsl(0, 0%, 89%);
 $white: hsl(0, 0%, 100%);
 $text-shadow: hsl(216, 58%, 8%);
+
+// --------------------------
+// COMPONENT STYLES
+// --------------------------
+
+$oval: 50px;
+$rounded-corners: 10px;
 
 // --------------------------
 // MIXINS
@@ -21,6 +28,14 @@ $text-shadow: hsl(216, 58%, 8%);
 @mixin home-text {
   letter-spacing: 0.1rem;
   font-weight: normal;
+}
+
+@mixin page-heading {
+  @include font-size(6rem);
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  text-shadow: $blue 0 0.05rem 0.1rem;
+  text-align: center;
 }
 
 @mixin outline-out {
@@ -86,5 +101,31 @@ $text-shadow: hsl(216, 58%, 8%);
     margin: 0 -2.1rem 0 0;
     border: $gold solid 4px;
     border-radius: 15px;
+  }
+}
+
+@mixin mobile-only {
+  @media (max-width: 499px) {
+    @content;
+  }
+}
+@mixin tablet-up {
+  @media (min-width: 500px) {
+    @content;
+  }
+}
+@mixin for-tablet-landscape-up {
+  @media (min-width: 900px) {
+    @content;
+  }
+}
+@mixin for-desktop-up {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+@mixin large-display-only {
+  @media (min-width: 1800px) {
+    @content;
   }
 }
