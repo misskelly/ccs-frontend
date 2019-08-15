@@ -32,9 +32,9 @@
 }
 
 .small {
+  text-align: center;
+  position: relative;
   transition: all 0.3s ease;
-
-  // &:hover:before,
   &:focus:before,
   &:active:before {
     .phone-icon {
@@ -50,7 +50,6 @@
       -ms-transform: scale(1.2);
       transform: scale(1.2);
     }
-    // margin: 0;
   }
   &:focus {
     .phone-icon {
@@ -65,8 +64,8 @@
 }
 
 .phone-icon {
-  transition: transform 0.3s linear;
-  margin: 0 auto;
+  @include outline-out;
+  transition: transform 0.3s ease;
 }
 
 @keyframes fadeIn {

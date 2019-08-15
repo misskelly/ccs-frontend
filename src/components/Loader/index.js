@@ -9,7 +9,7 @@ export const Loader = () => {
       <p className="quote-text">
         {fredRogersQuote}
         {' '}
-        <strong>-Fred Rogers</strong>
+        <strong> -Fred Rogers</strong>
       </p>
       <div className="icon-spinner" />
     </article>

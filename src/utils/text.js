@@ -23,7 +23,7 @@ export const menuItemText = [
 
 export const serviceText1 = 'For help with any mental health, substance use or emotional concern—for you, or someone you know—call Colorado Crisis Services at';
 
-export const serviceText2 = '. Our trained counselors provide immediate and confidential help, 24/7/365. Choose an option to learn more, or visit ';
+export const serviceText2 = '. Trained counselors provide immediate and confidential help, 24/7/365. Choose an option to learn more, or visit ';
 
 export const fredRogersQuotes = [
   "There's no 'should' or 'should not' when it comes to having feelings. They're part of who we are and their origins are beyond our control. When we can believe that, we may find it easier to make constructive choices about what to do with those feelings.",

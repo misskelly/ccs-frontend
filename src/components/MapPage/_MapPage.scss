@@ -47,7 +47,7 @@
   &:focus,
   &:hover {
     .directions-icon {
-      border: 4px solid $gold;
+      border: $focus-ring;
     }
     .map-btn-text {
       color: $gold;

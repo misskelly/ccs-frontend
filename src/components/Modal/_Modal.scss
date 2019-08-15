@@ -7,7 +7,6 @@
   border-radius: 15px;
 
   label {
-    // margin-top: .1rem;
     color: transparent;
   }
 
@@ -43,12 +42,11 @@
   line-height: 1;
   display: flex;
   align-self: center;
+  align-items: center;
   padding: 0.5rem 2rem;
-  background: $muted-blue;
-  justify-content: space-around;
+  background: $blue;
+  justify-content: space-between;
   border-radius: 15px;
-
-  // background-image: linear-gradient(-225deg, $muted-blue 25%, $blue 75%);
   &:hover,
   &:focus {
     background: $white;

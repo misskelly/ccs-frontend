@@ -1,5 +1,6 @@
 .home-page {
   @include page-component;
+  // width
 }
 
 .water-img {
@@ -13,8 +14,7 @@
 
 .home-heading,
 .help-hours-heading,
-.btn-wrapper,
-.service-desc-p {
+.btn-wrapper {
   width: 90%;
 }
 
@@ -61,16 +61,19 @@
 }
 
 .service-desc-p {
-  margin: 5rem 3rem;
+  width: 85%;
+  margin: 5rem 0 2rem 0;
   line-height: 1.6;
   max-width: 600px;
 }
 
 .inline-link {
   color: $blue;
-  text-decoration: none;
   padding: 0 5px;
   cursor: pointer;
+  &:focus {
+    outline: $gold auto 4px;
+  }
 }
 
 .footer-link {
@@ -121,6 +124,6 @@
   z-index: 15;
   transition: transform 0.3s linear;
   height: 12rem;
-  margin: 5rem;
+  margin: 5rem auto 0 auto;
   padding: 1rem;
 }

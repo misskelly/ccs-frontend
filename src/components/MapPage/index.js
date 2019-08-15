@@ -26,6 +26,12 @@ const MapPage = () => {
     }
   };
 
+  const url = mode => {
+    `https://www.google.com/maps/dir/?api=1&origin=${userLocation[0]},${
+      userLocation[1]
+    }&destination=${closestLocation.lat},${closestLocation.lng}&travelmode=${mode}`;
+  };
+
   const drivingUrl = `https://www.google.com/maps/dir/?api=1&origin=${userLocation[0]},${
     userLocation[1]
   }&destination=${closestLocation.lat},${closestLocation.lng}&travelmode=driving`;
@@ -57,7 +63,7 @@ const MapPage = () => {
           <div className="directions-wrapper">
             <a
               className="map-icon-link"
-              href={drivingUrl}
+              href={url('driving')}
               target="_blank"
               rel="noopener noreferrer"
             >
