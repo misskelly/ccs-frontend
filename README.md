@@ -1,3 +1,6 @@
+///// CURRENTLY UNDER CONSTRUCTION!!
+
+[![CircleCI](https://circleci.com/gh/CSheesley/ccs-frontend.svg?style=svg)](https://circleci.com/gh/CSheesley/ccs-frontend)
 # InCrisis
 
 ## Abstract:
@@ -11,29 +14,8 @@ We created InCrisis because we saw a need for people to be able to access Colora
 [BE Repo](https://github.com/CSheesley/ccs_cross_poll_backend)
 
 
-## Setup:
-
-First, clone down the repo.
-
-```bash
-git clone 
-```
-
-Once you have cloned the repo, install the library dependencies. Run:
-
-```bash
-npm install
-```
-
-To run tests in the program, Run:
-
-```bash
-npm test
-```
 
 ## GIF of project:
-
-![maybe](https://user-images.githubusercontent.com/40863560/61754544-cc79fd80-ad70-11e9-8239-e92bcb361ba4.gif)
 
 
 ## Technologies used:
@@ -50,8 +32,6 @@ npm test
 * Rspec
 * CircleCI
 
-## Circle CI:
-[![CircleCI](https://circleci.com/gh/CSheesley/ccs-frontend.svg?style=svg)](https://circleci.com/gh/CSheesley/ccs-frontend)
 
 ## Authors:
 
