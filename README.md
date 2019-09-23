@@ -1,11 +1,11 @@
-///// CURRENTLY UNDER CONSTRUCTION!!
 
 [![CircleCI](https://circleci.com/gh/CSheesley/ccs-frontend.svg?style=svg)](https://circleci.com/gh/CSheesley/ccs-frontend)
 # InCrisis
+![](https://user-images.githubusercontent.com/27245530/65464449-0752ed00-de17-11e9-938f-49a94d499964.png)
 
 ### Overview
 This is the repository for the front end application, which works in conjunction with our [back end application](https://cohelp-backend.herokuapp.com) (repository [here](https://github.com/CSheesley/ccs_cross_poll_backend)), to create the full functioning website.  
-#### inCrisis is viewable in production at **[inCrisis.herokuapp.com](https://incrisis.herokuapp.com/)**
+#### inCrisis is viewable in production at **[inCrisis.netlify.com](https://incrisis.netlify.com/)**
 
 Visitors who use our application can quickly and easily find the closest Walk-In Crisis Center based on their location, which can be manually entered or gathered from the browser. Our backend application incorporates the latitude and longitude of the user with the Google Distance Matrix API, returning ordered crisis centers based on proximity. Once a user finds the nearest walk-in center, there are links to choose the preferred mode of transportation to that center (driving, walking, biking, or public transit), along with an option to receive a text notification containing information about the closest center.
 
